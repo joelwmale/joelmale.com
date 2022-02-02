@@ -8,16 +8,12 @@ import Seo from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Joel Male`
-  const image = post.frontmatter.image
-    ? post.frontmatter.image.childImageSharp.resize
-    : null
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={image}
         pathname={location.pathname}
       />
 
@@ -95,15 +91,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        image: featured {
-          childImageSharp {
-            resize(width: 1200) {
-              src
-              height
-              width
-            }
-          }
-        }
       }
     }
   }
