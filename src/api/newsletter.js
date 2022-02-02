@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          "X-MailerLite-ApiKey": 'c26a36031cb5ea43109e9246305dbb29', //process.env.API_KEY,
+          "X-MailerLite-ApiKey": process.env.API_KEY,
         },
       }
     )
