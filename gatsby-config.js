@@ -2,17 +2,22 @@ module.exports = {
   siteMetadata: {
     title: `Joel Male`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    keywords: [
-      'laravel',
-      'shopify',
-      'web development'
-    ],
+    keywords: ["laravel", "shopify", "web development"],
     siteUrl: `https://joelmale.com/`,
     social: {
       twitter: `joelwmale`,
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-218431868-1`,
+        head: true,
+        defer: true,
+        enableWebVitalsTracking: true,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
@@ -35,9 +40,9 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-code-titles',
+            resolve: "gatsby-remark-code-titles",
             options: {
-              className: 'your-custom-class-name',
+              className: "your-custom-class-name",
             },
           },
           {
@@ -65,14 +70,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-218431868-1`,
-        defer: true,
-        enableWebVitalsTracking: true
-      },
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
