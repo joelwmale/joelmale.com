@@ -8,12 +8,12 @@
   @apply flex;
 
   li {
-    @apply mx-2 md:mx-6 opacity-0 scale-50 blur-sm;
+    @apply mx-4 md:mx-6 opacity-0 scale-50 blur-sm;
 
     animation: fadeDown 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
 
     a {
-      @apply text-lg md:text-2xl text-white transition-all duration-300 hover:text-purple-500 font-bold;
+      @apply text-lg md:text-xl text-white transition-all duration-300 hover:text-purple-500 font-bold;
     }
   }
 }
@@ -39,6 +39,12 @@
         cubic-bezier(0.11, 0, 0.5, 0);
     }
   }
+}
+
+.fade-in {
+  @apply opacity-0 blur-sm;
+
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .link-btn {

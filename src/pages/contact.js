@@ -26,12 +26,6 @@ const Contact = ({ data, location }) => {
             </p>
           </div>
         </div>
-
-        <div className="absolute -translate-x-1/2 -translate-y-full arrow bottom-20 left-1/2">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </Layout>
   )

@@ -11,7 +11,7 @@ const Home = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Joel Male: Backend Engineer & Mentor + Leader | Brisbane" forceTitle={true} />
 
       <div className="relative flex items-center justify-center w-full h-screen">
         <div className="w-[95%] md:w-[90%] flex flex-col items-center text-white">
@@ -40,12 +40,12 @@ const Home = ({ data, location }) => {
             <span className="hidden text-purple-500 sm:inline-block">|</span>
             <span>DevOps Guru</span>
           </h2>
-          <Link to="/contact" className="mt-8 link-btn">
+          <Link to="/contact" className="mt-8 link-btn fade-in">
             <span>Let's connect</span>
           </Link>
         </div>
 
-        <div className="absolute -translate-x-1/2 -translate-y-full arrow bottom-20 left-1/2">
+        <div className="absolute -translate-x-1/2 -translate-y-full arrow bottom-20 left-1/2 fade-in">
           <span></span>
           <span></span>
           <span></span>

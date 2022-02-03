@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ description, lang, meta, title, pathname }) => {
+const Seo = ({ description, lang, meta, title, pathname, forceTitle }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,7 +23,7 @@ const Seo = ({ description, lang, meta, title, pathname }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = forceTitle ? null : site.siteMetadata?.title
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
@@ -98,6 +98,7 @@ Seo.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
   pathname: PropTypes.string,
+  forceTitle: PropTypes.bool,
 }
 
 export default Seo
