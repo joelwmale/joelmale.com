@@ -8,9 +8,7 @@
   @apply flex;
 
   li {
-    @apply mx-4 md:mx-6 opacity-0 scale-50 blur-sm;
-
-    animation: fadeDown 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    @apply mx-4 md:mx-6;
 
     a {
       @apply text-lg md:text-xl text-white transition-all duration-300 hover:text-purple-500 font-bold;
