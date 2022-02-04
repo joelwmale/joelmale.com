@@ -11,11 +11,11 @@ const Home = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo 
-        title="Joel Male: Backend Engineer & Mentor + Leader | Brisbane" 
-        forceTitle={true} 
+      <Seo
+        title="Joel Male: Backend Engineer & Mentor + Leader | Brisbane"
+        forceTitle={true}
         description="I'm a backend developer using Laravel to solve problems and create fun experiences. I sometimes write content to share my knowledge with others."
-        />
+      />
 
       <div className="relative flex items-center justify-center w-full h-screen">
         <div className="w-[95%] md:w-[90%] flex flex-col items-center text-white">
@@ -110,7 +110,9 @@ const Home = ({ data, location }) => {
                   to being a great leader and creating high performing teams.
                 </p>
 
-                <p className="pl-1 mt-3">This is what I've been up to lately:</p>
+                <p className="pl-1 mt-3">
+                  This is what I've been up to lately:
+                </p>
 
                 <ul className="items-stretch grid grid-cols-2 gap-x-0 gap-y-3 mt-3 w-full max-w-[400px]">
                   <li className="up-to-highlight">TALL Stack</li>

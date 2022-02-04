@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Joel Male: Backend Engineer + Leader | Brisbane`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `I'm a backend developer using Laravel to solve problems and create fun experiences. I sometimes write content to share my knowledge with others.`,
     keywords: ["laravel", "shopify", "web development"],
     siteUrl: `https://joelmale.com/`,
     social: {
@@ -130,9 +130,6 @@ module.exports = {
         short_name: `Joel Male`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
