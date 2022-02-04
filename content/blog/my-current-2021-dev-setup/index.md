@@ -2,12 +2,12 @@
 title: My current (2021) dev setup
 date: "2021-12-30"
 description: "A curated summary of all of the tools I use in my daily life as a senior back-end developer + leader."
-published: true
+featured: images/my-current-2021-setup.png
 ---
 
 I spend more time than I honestly should looking at ways to better my dev setup and be more productive in my day to day.
 
-At some point, I know I'll hit the point of diminishing returns where the time spent trying to be more productive, is no longer yielding the results that make it worth it but for now, I love reading posts from other developers.
+At some point, I know I'll hit the point of diminishing returns where the time spent trying to be more productive, is no longer yielding the results that make it worth it but for now, I love reading posts from other developers.  
 
 ## Personal Dotfiles
 

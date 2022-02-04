@@ -9,7 +9,10 @@ const Contact = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Contact" />
+      <Seo 
+        title="Contact" 
+        description="I love giving advice and talking about all things web, dev, ops, and Laravel. I also love hearing the stories of others and how they made it as a dev."
+        />
 
       <div className="relative flex items-center justify-center w-full h-screen">
         <div className="w-[95%] md:w-[90%] flex flex-col items-center text-white">

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Joel Male`,
+    title: `Joel Male: Backend Engineer + Leader | Brisbane`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     keywords: ["laravel", "shopify", "web development"],
     siteUrl: `https://joelmale.com/`,

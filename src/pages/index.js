@@ -11,7 +11,11 @@ const Home = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Joel Male: Backend Engineer & Mentor + Leader | Brisbane" forceTitle={true} />
+      <Seo 
+        title="Joel Male: Backend Engineer & Mentor + Leader | Brisbane" 
+        forceTitle={true} 
+        description="I'm a backend developer using Laravel to solve problems and create fun experiences. I sometimes write content to share my knowledge with others."
+        />
 
       <div className="relative flex items-center justify-center w-full h-screen">
         <div className="w-[95%] md:w-[90%] flex flex-col items-center text-white">
@@ -193,7 +197,7 @@ const Home = ({ data, location }) => {
           <div className="py-10">
             <h2 className="section-heading">Writing</h2>
 
-            <div>
+            <div class="mt-4">
               {posts.length > 0 ? (
                 <div className="h-max">
                   <ul className="grid items-stretch justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4">

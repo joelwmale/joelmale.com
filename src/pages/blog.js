@@ -11,7 +11,10 @@ const Blog = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} className="bg-[#404040]">
-      <Seo title="A top quality dev blog" />
+      <Seo 
+        title="A top quality dev blog" 
+        description="I sometimes share my top quality finds throughout the last fortnight, and tips and tricks along the way."
+        />
 
       <div className="relative flex items-center justify-center w-full h-[60vh]">
         <div className="w-[95%] sm:w-[80%] flex flex-col items-center text-white">

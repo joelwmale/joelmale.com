@@ -2,7 +2,7 @@
 title: Choosing the right software development pathway for you
 date: "2022-01-19"
 description: "Becoming a software developer is exciting. But what kind of developer will you be? In this post, I explain a few of the niches within software development."
-published: true
+feature: images/software-development-pathways.jpeg
 ---
 
 So, you’ve chosen a career in software development. *Check.* But have you narrowed down your career pathway? For so many developers—junior and senior alike—this decision relies not only on your areas of interest but also your experience and strengths.
