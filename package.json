@@ -67,10 +67,5 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "dates": "git-date-extractor --outputToFile --onlyIn ./content/blog/",
     "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run dates"
-    }
   }
 }
