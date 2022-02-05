@@ -2,8 +2,9 @@
 title: 8 tips to becoming a better developer
 date: "2022-01-24"
 description: "Tips, tricks and advice on how to continue growing and become a better developer, day-by-day."
-published: true
 featured: images/8-tips-to-become-a-better-developer.jpeg
+categories: ['development']
+tags: ['tips & tricks', 'dev']
 ---
 
 First of all - what does being a better developer mean to you? We know by now that the best developers can’t rest on the laurels of their talent or the number of hours spent at the screen. 
