@@ -8,7 +8,7 @@
   @apply flex;
 
   li {
-    @apply mx-4 md:mx-6;
+    @apply mx-3 md:mx-6;
 
     a {
       @apply text-lg md:text-xl text-white transition-all duration-300 hover:text-purple-500 font-bold;
@@ -95,6 +95,10 @@
       width: 100%;
     }
   }
+}
+
+.gradient-bg {
+  background: linear-gradient(90deg, #682ae9 20%, #e778ff);
 }
 
 .link {
@@ -187,6 +191,12 @@ deckgo-highlight-code {
     @apply font-bold text-yellow-500 mb-4;
   }
 
+  h2, h3, h4, h5, h6 {
+    a {
+      @apply text-yellow-500 absolute top-1/2 -translate-y-[50%] -left-8;
+    }
+  }
+
   p {
     @apply mb-6;
   }
@@ -276,5 +286,29 @@ deckgo-highlight-code {
 
   deckgo-highlight-code {
     @apply mb-6;
+  }
+}
+
+.table-of-contents {
+  ul {
+    > li {
+      > p {
+        @apply mb-0;
+
+        a {
+          @apply text-white text-lg font-bold;
+        }
+      }
+
+      ul {
+        a {
+          @apply text-white font-bold;
+        }
+      }
+
+      &::before {
+        @apply hidden;
+      }
+    }
   }
 }

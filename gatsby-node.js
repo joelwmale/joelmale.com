@@ -1,11 +1,19 @@
 const path = require(`path`)
+const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const gdeStamps = require("./timestamps.json")
+
+const posixSlash = (input = "") => {
+  return input.split(path.sep).join(path.posix.sep)
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
+  const categoryTemplate = path.resolve(`./src/templates/categories.js`)
+  const tagTemplate = path.resolve(`./src/templates/tags.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -19,7 +27,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+              created
+              modified
             }
+            frontmatter {
+              categories
+              tags
+            }
+          }
+        }
+        tagsGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
+          }
+        }
+        categoriesGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___categories) {
+            fieldValue
           }
         }
       }
@@ -36,9 +60,37 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allMarkdownRemark.nodes
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
+  // Extract tag data from query
+  const categories = result.data.categoriesGroup.group
+
+  if (categories.length > 0) {
+    // Make category pages
+    categories.forEach(category => {
+      createPage({
+        path: `/categories/${_.kebabCase(category.fieldValue)}/`,
+        component: categoryTemplate,
+        context: {
+          category: category.fieldValue,
+        },
+      })
+    })
+  }
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group
+
+  if (tags.length > 0) {
+    // Make tag pages
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
+        },
+      })
+    })
+  }
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
@@ -47,7 +99,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: post.fields.slug,
-        component: blogPost,
+        component: blogPostTemplate,
         context: {
           id: post.id,
           previousPostId,
@@ -63,12 +115,40 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    const fileNode = getNode(node.parent);
 
     createNodeField({
       name: `slug`,
       node,
       value,
-    })
+    });
+
+    let stamps = {
+			created: fileNode.birthtimeMs,
+			modified: fileNode.mtimeMs,
+		};
+
+    const filePathRelativeToRoot = posixSlash(fileNode.absolutePath).replace(
+      `${posixSlash(__dirname)}/`,
+      ""
+    )
+
+    const stampEntry = gdeStamps[filePathRelativeToRoot]
+
+    if (stampEntry && stampEntry.created) {
+      stamps = {
+        created: stampEntry.created * 1000,
+        modified: stampEntry.modified * 1000,
+      }
+    }
+
+    for (const key in stamps) {
+      actions.createNodeField({
+        node,
+        name: key,
+        value: stamps[key],
+      })
+    }
   }
 }
 
@@ -104,6 +184,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Fields {
       slug: String
+      created: String
+      modified: String
     }
   `)
 }

@@ -40,15 +40,35 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-code-titles",
+            resolve: `gatsby-remark-table-of-contents`,
             options: {
-              className: "your-custom-class-name",
+              exclude: "Table of Contents",
+              tight: false,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+              className: "table-of-contents"
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: `<svg width="24" height="24" fill="none" viewBox="0 0 24 24"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 4.75L7.75 19.25"></path> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.25 4.75L13.75 19.25"></path> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 8.75H5.75"></path> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.25 15.25H4.75"></path></svg>`,
+              className: `header-link`,
+            },
+          },
+          `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               terminal: "carbon",
+            },
+          },
+          {
+            resolve: 'gatsby-plugin-sitemap',
+            options: {
+              output: '/',
+              createLinkInHead: true
             },
           },
           {
