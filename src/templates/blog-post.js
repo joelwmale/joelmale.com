@@ -6,13 +6,18 @@ import _ from "lodash"
 import { Newsletter } from "../components/newsletter"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import moment from "moment"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Joel Male`
   const image = post.frontmatter.image
-      ? post.frontmatter.image.childImageSharp.resize
-      : null
+    ? post.frontmatter.image.childImageSharp.resize
+    : null
+
+  // get last updated
+  const updated =
+    moment(parseInt(post.fields.modified, 10)).format("MMMM Do, YYYY") || null
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -42,43 +47,43 @@ const BlogPostTemplate = ({ data, location }) => {
               <div class="mb-4">
                 {post.frontmatter.categories && (
                   <div class="flex">
-                  <h3 class="text-white mr-2">Categories:</h3>
-                  <ul className="flex flex-wrap">
-                    {post.frontmatter.categories.map((category, i) => (
-                      <li key={category} className="mr-2">
-                      {i > 0 && (
+                    <h3 class="text-white mr-2">Categories:</h3>
+                    <ul className="flex flex-wrap">
+                      {post.frontmatter.categories.map((category, i) => (
+                        <li key={category} className="mr-2">
+                          {i > 0 && (
                             <span className="mr-2 -ml-2 text-white">,</span>
                           )}
-                        <a
-                          href={`/categories/${category}`}
-                          className="capitalize duration-500 text-secondary hover:text-yellow-500"
-                        >
-                          {category}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                          <a
+                            href={`/categories/${category}`}
+                            className="capitalize duration-500 text-secondary hover:text-yellow-500"
+                          >
+                            {category}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 )}
 
                 {post.frontmatter.tags && (
                   <div class="flex">
-                  <h3 class="text-white mr-2">Tags:</h3>
-                  <ul className="flex flex-wrap">
-                    {post.frontmatter.tags.map((tag, i) => (
-                      <li key={tag} className="mr-2">
-                      {i > 0 && (
+                    <h3 class="text-white mr-2">Tags:</h3>
+                    <ul className="flex flex-wrap">
+                      {post.frontmatter.tags.map((tag, i) => (
+                        <li key={tag} className="mr-2">
+                          {i > 0 && (
                             <span className="mr-2 -ml-2 text-white">,</span>
                           )}
-                        <a
-                          href={`/tags/${tag}`}
-                          className="capitalize duration-500 text-secondary hover:text-yellow-500"
-                        >
-                          {tag}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                          <a
+                            href={`/tags/${tag}`}
+                            className="capitalize duration-500 text-secondary hover:text-yellow-500"
+                          >
+                            {tag}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 )}
               </div>
@@ -105,6 +110,13 @@ const BlogPostTemplate = ({ data, location }) => {
               itemProp="articleBody"
             />
           </article>
+
+          {updated && (
+            <div className="flex flex-col mb-4">
+              <h3 class="text-secondary opacity-20 text-sm">Last Updated</h3>
+              <p class="text-white">{updated}</p>
+            </div>
+          )}
 
           <div>
             <div className="w-full bg-secondary h-[1px]"></div>
@@ -139,6 +151,10 @@ export const pageQuery = graphql`
       timeToRead
       excerpt(pruneLength: 160)
       html
+      fields {
+        created
+        modified
+      }
       frontmatter {
         title
         tags

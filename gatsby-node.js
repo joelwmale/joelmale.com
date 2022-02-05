@@ -1,6 +1,11 @@
 const path = require(`path`)
 const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const gdeStamps = require("./timestamps.json")
+
+const posixSlash = (input = "") => {
+  return input.split(path.sep).join(path.posix.sep)
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -22,6 +27,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+              created
+              modified
             }
             frontmatter {
               categories
@@ -108,12 +115,40 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    const fileNode = getNode(node.parent);
 
     createNodeField({
       name: `slug`,
       node,
       value,
-    })
+    });
+
+    let stamps = {
+			created: fileNode.birthtimeMs,
+			modified: fileNode.mtimeMs,
+		};
+
+    const filePathRelativeToRoot = posixSlash(fileNode.absolutePath).replace(
+      `${posixSlash(__dirname)}/`,
+      ""
+    )
+
+    const stampEntry = gdeStamps[filePathRelativeToRoot]
+
+    if (stampEntry && stampEntry.created) {
+      stamps = {
+        created: stampEntry.created * 1000,
+        modified: stampEntry.modified * 1000,
+      }
+    }
+
+    for (const key in stamps) {
+      actions.createNodeField({
+        node,
+        name: key,
+        value: stamps[key],
+      })
+    }
   }
 }
 
@@ -149,6 +184,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Fields {
       slug: String
+      created: String
+      modified: String
     }
   `)
 }
