@@ -1,14 +1,10 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
-
-// Utilities
 import _ from "lodash"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Newsletter } from "../components/newsletter"
-import Tags from "../templates/tags"
 
 const CategoriesPage = ({
   data: {

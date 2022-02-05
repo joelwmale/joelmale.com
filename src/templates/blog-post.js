@@ -1,8 +1,5 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-
-import _ from "lodash"
-
 import { Newsletter } from "../components/newsletter"
 import Layout from "../components/layout"
 import Seo from "../components/seo"

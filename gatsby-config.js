@@ -57,12 +57,7 @@ module.exports = {
               className: `header-link`,
             },
           },
-          {
-            resolve: "gatsby-remark-code-titles",
-            options: {
-              className: "your-custom-class-name",
-            },
-          },
+          `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
