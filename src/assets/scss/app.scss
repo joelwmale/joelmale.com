@@ -160,7 +160,7 @@
 
   &::before {
     @apply mr-2;
-    content: '//';
+    content: "//";
   }
 }
 
@@ -171,7 +171,7 @@ deckgo-highlight-code {
 }
 
 .gatsby-resp-image-wrapper {
-  margin-left: revert!important;
+  margin-left: revert !important;
 }
 
 .blog-post {
@@ -191,9 +191,13 @@ deckgo-highlight-code {
     @apply font-bold text-yellow-500 mb-4;
   }
 
-  h2, h3, h4, h5, h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     a {
-      @apply text-yellow-500 absolute top-1/2 -translate-y-[50%] -left-8;
+      @apply hidden sm:absolute text-yellow-500 top-1/2 -translate-y-[50%] -left-8;
     }
   }
 
