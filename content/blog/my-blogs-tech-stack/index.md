@@ -25,7 +25,7 @@ As a developer, you never want to settle for a tool like WordPress as your initi
 
 Your first thought is to always code something that is free, and that you have full control over. Whilst this is always your first thought, and you may ultimately drop a few hours into setting up and starting such a project, it's never the first version of your website, and the same went for me.
 
-### Blog v0.1 > Laravel
+### Laravel
 
 I ultimately started this blog in PHP and a framework called [Laravel](https://laravel.com/) as it's been my bread & butter my whole career. This ended up being a horrible idea as I just tried to re-invent the wheel of blog posts, categories, tags, etc.
 
