@@ -145,10 +145,22 @@
   },
   "content/blog/quality-resources-for-developers/images/8-tips-to-become-a-better-developer.jpeg": {
     "created": 1643768633,
-    "modified": 1644022212
+    "modified": 1644195562
   },
   "content/blog/quality-resources-for-developers/index.md": {
     "created": 1644022212,
-    "modified": 1644066409
+    "modified": 1644195562
+  },
+  "content/blog/my-blogs-tech-stack/images/post-definitions.png": {
+    "created": 1644620641,
+    "modified": 1644620656
+  },
+  "content/blog/my-blogs-tech-stack/images/rocket.jpeg": {
+    "created": 1644621445,
+    "modified": 1644621453
+  },
+  "content/blog/my-blogs-tech-stack/index.md": {
+    "created": 1644444444,
+    "modified": 1644621488
   }
 }
