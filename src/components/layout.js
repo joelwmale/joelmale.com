@@ -6,7 +6,7 @@ deckDeckGoHighlightElement();
 
 const Layout = ({ location, title, children }) => {
   return (
-    <div className="bg-[#1d252c]">
+    <div className="bg-[#1d252c] min-h-screen">
       <Header />
 
       <main>{children}</main>
