@@ -17,36 +17,14 @@ const Home = ({ data, location }) => {
         description="I'm a backend developer using Laravel to solve problems and create fun experiences. I sometimes write content to share my knowledge with others."
       />
 
-      <div className="relative flex items-center justify-center w-full h-screen">
-        <div className="w-[95%] md:w-[90%] flex flex-col items-center text-white">
+      <div className="relative flex items-center justify-center w-full py-[14rem]">
+        <div className="w-[95%] md:w-[90%] flex flex-col items-center text-purple-500">
           <div className="text-left w-max">
-            <p className="text-xs hero-text">
-              <span>Hi,</span>
-              <span>I'm</span>
-            </p>
-            <h1 className="text-5xl font-bold uppercase hero-text">
-              <span>Joel</span>
-              <span>Male</span>
+            <h1 className="font-bold text-center uppercase w-max">
+              <p class="text-[9rem] md:text-[12rem] leading-[0.8]">Joel</p>
+              <p class="bg-purple-500 text-black text-[7rem] md:text-[10rem] leading-[0.8] w-full">Male</p>
             </h1>
           </div>
-          <h2 className="flex mt-4 text-lg font-bold sm:text-3xl md:text-4xl hero-text">
-            <span>Laravel,</span>
-            <span>TailwindCSS,</span>
-            <span>React,</span>
-            <span>Shopify</span>
-          </h2>
-          <h2 className="flex flex-col items-center mt-4 text-xl font-bold uppercase hero-text sm:flex-row">
-            <span>Leader</span>
-            <span className="hidden text-purple-500 sm:inline-block">|</span>
-            <span>Mentor</span>
-            <span className="hidden text-purple-500 sm:inline-block">|</span>
-            <span>Backend Engineer</span>
-            <span className="hidden text-purple-500 sm:inline-block">|</span>
-            <span>DevOps Guru</span>
-          </h2>
-          <Link to="/contact" className="mt-8 link-btn fade-in">
-            <span>Let's connect</span>
-          </Link>
         </div>
 
         <div className="absolute -translate-x-1/2 -translate-y-full arrow bottom-20 left-1/2 fade-in">

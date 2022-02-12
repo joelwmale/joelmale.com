@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
       />
 
       <div className="flex justify-center pt-40">
-        <div className="max-w-[95%] sm:max-w-[90%] lg:max-w-[756px] text-tertiary">
+        <div className="max-w-[95%] sm:max-w-[90%] lg:max-w-[906px] text-tertiary">
           <article itemScope itemType="http://schema.org/Article">
             <header>
               <h1

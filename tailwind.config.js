@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Montserrat', 'sans-serif'],
-        'serif': ['Montserrat', 'sans-serif'],
-        'mono': ['Montserrat', 'sans-serif'],
-        'display': ['Montserrat', 'sans-serif'],
-        'body': ['Montserrat', 'sans-serif']
+        'sans': ['Stolzl', 'sans-serif'],
+        'serif': ['Stolzl', 'sans-serif'],
+        'mono': ['Stolzl', 'sans-serif'],
+        'display': ['Stolzl', 'sans-serif'],
+        'body': ['Stolzl', 'sans-serif']
       },
 
       colors: {

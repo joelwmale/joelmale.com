@@ -9,7 +9,7 @@ const Layout = ({ location, title, children }) => {
     <div className="bg-[#1d252c] min-h-screen">
       <Header />
 
-      <main>{children}</main>
+      <main class="max-w-[1440px] mx-auto">{children}</main>
       
       {/* <footer>
         © {new Date().getFullYear()}, Built with

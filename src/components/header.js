@@ -4,8 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
   return (
-    <div className="absolute top-0 left-0 z-30 w-full">
-      <div className="max-w-[90%] mx-auto py-8 flex justify-between items-center">
+    <div className="absolute top-0 left-0 z-30 w-full border-b-[1px] border-b-purple-500">
+      <div className="max-w-[90%] mx-auto py-4 flex justify-between items-center">
         <Link to="/">
           <StaticImage
             objectFit="contain"
