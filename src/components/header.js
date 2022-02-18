@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Header = () => {
   return (
     <div className="absolute top-0 left-0 z-30 w-full border-b-[1px] border-b-purple-500">
-      <div className="max-w-[90%] mx-auto py-4 flex justify-between items-center">
+      <div className="max-w-[90%] mx-auto py-2 flex-col sm:flex-row flex justify-between items-center">
         <Link to="/">
           <StaticImage
             objectFit="contain"
@@ -18,13 +18,16 @@ const Header = () => {
           />
         </Link>
 
-        <div>
+        <div class="mt-4 mb-2 sm:my-0">
           <ul className="menu">
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/newsletter">Newsletter</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>

@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Newsletter } from "../components/newsletter"
+import { NewsletterComponent } from "../components/newsletter-component"
 
 const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -43,7 +43,7 @@ const Blog = ({ data, location }) => {
               of awesome stuff.
             </p>
 
-            <Newsletter />
+            <NewsletterComponent />
           </div>
         </div>
         <div className="py-10 max-w-[90%] mx-auto">
@@ -59,7 +59,7 @@ const Blog = ({ data, location }) => {
                     >
                       <Link
                         to={post.fields.slug}
-                        className="hover:cursor-ne-resize"
+                        className="hover:cursor-pointer"
                       >
                         <article itemScope itemType="http://schema.org/Article">
                           <header>

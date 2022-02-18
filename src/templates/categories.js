@@ -5,7 +5,7 @@ import _ from "lodash"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Newsletter } from "../components/newsletter"
+import { NewsletterComponent } from "../components/newsletter-component"
 
 const Categories = ({ pageContext, data }) => {
   const { category } = pageContext
@@ -43,7 +43,7 @@ const Categories = ({ pageContext, data }) => {
               of awesome stuff.
             </p>
 
-            <Newsletter />
+            <NewsletterComponent />
           </div>
         </div>
         <div className="py-10 max-w-[90%] lg:max-w-[100%] mx-auto">
@@ -53,7 +53,6 @@ const Categories = ({ pageContext, data }) => {
               <div className="h-max">
                 <ul className="grid items-stretch justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4">
                   {edges.map((node, i) => {
-                    console.log(node)
                     const { timeToRead } = node.node
                     const { slug } = node.node.fields
                     const { title, date } = node.node.frontmatter
@@ -62,7 +61,7 @@ const Categories = ({ pageContext, data }) => {
                         key={i}
                         className="blog-post-gradient p-4 flex justify-start min-h-[180px]"
                       >
-                        <Link to={slug} className="hover:cursor-ne-resize">
+                        <Link to={slug} className="hover:cursor-pointer">
                           <article
                             itemScope
                             itemType="http://schema.org/Article"

@@ -4,6 +4,10 @@
 
 @import "./animations";
 
+html {
+  @apply scroll-smooth;
+}
+
 .menu {
   @apply flex;
 
@@ -102,7 +106,7 @@
 }
 
 .link {
-  @apply text-purple-500 cursor-ne-resize font-bold;
+  @apply text-purple-500 font-bold;
 }
 
 .up-to-highlight {
@@ -176,6 +180,43 @@ deckgo-highlight-code {
 
 .blog-post {
   @apply text-sm md:text-base py-10 text-secondary;
+
+  .table-of-contents {
+    @apply pb-4 mb-12 border-b border-purple-500 w-full;
+
+    ul {
+      @apply flex flex-col gap-1;
+
+      counter-reset: numbering;
+      a {
+        @apply text-white hover:text-purple-500 inline-flex items-center transition-all duration-200;
+      }
+
+      > li {
+        counter-increment: numbering;
+        > a {
+          &::before {
+            content: counters(numbering, ".") ". ";
+            @apply text-purple-500 font-bold mr-2;
+          }
+        }
+
+        > ul {
+          @apply pl-8;
+
+          > li > a::before {
+            content: counters(numbering, ".") ". ";
+            @apply text-purple-500 font-bold mr-2;
+          }
+        }
+      }
+    }
+
+    p {
+      @apply py-0;
+    }
+  }
+
 
   h2 {
     @apply text-2xl md:text-3xl font-bold text-yellow-500 mb-4;

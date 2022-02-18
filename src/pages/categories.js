@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import _ from "lodash"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Newsletter } from "../components/newsletter"
+import { NewsletterComponent } from "../components/newsletter-component"
 
 const CategoriesPage = ({
   data: {
@@ -50,7 +50,7 @@ const CategoriesPage = ({
             awesome stuff.
           </p>
 
-          <Newsletter />
+          <NewsletterComponent />
         </div>
       </div>
       <div className="py-10 max-w-[90%] lg:max-w-[100%] mx-auto">
@@ -66,7 +66,7 @@ const CategoriesPage = ({
                   >
                     <Link
                       to={`/categories/${_.kebabCase(category.fieldValue)}/`}
-                      className="hover:cursor-ne-resize"
+                      className="hover:cursor-pointer"
                     >
                       <article itemScope itemType="http://schema.org/Article">
                         <header>

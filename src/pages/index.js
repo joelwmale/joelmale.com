@@ -188,7 +188,7 @@ const Home = ({ data, location }) => {
                       >
                         <Link
                           to={post.fields.slug}
-                          className="hover:cursor-ne-resize"
+                          className="hover:cursor-pointer"
                         >
                           <article
                             itemScope
@@ -221,6 +221,14 @@ const Home = ({ data, location }) => {
               ) : (
                 <p>No posts yet</p>
               )}
+            </div>
+          </div>
+
+          <div className="py-10">
+            <h2 className="section-heading">Projects</h2>
+
+            <div class="mt-4">
+            
             </div>
           </div>
         </div>

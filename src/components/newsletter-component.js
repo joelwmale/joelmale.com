@@ -1,7 +1,7 @@
 import axios from "axios"
 import React, { useState } from "react"
 
-export const Newsletter = () => {
+export const NewsletterComponent = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [subscribed, setSubscribed] = useState(false)
@@ -50,7 +50,7 @@ export const Newsletter = () => {
               onChange={e => setEmail(e.target.value)}
             />
           </div>
-          <button className="col-span-2 link-btn md:col-span-1">
+          <button className="col-span-2 mt-4  md:mt-0 link-btn md:col-span-1">
             <span>Subscribe</span>
           </button>
         </div>

@@ -1,5 +1,5 @@
 ---
-title: 8 tips to becoming a better developer
+title: 8 Tips To Becoming A Better Developer
 date: "2022-01-24"
 description: "Tips, tricks and advice on how to continue growing and become a better developer, day-by-day."
 featured: images/8-tips-to-become-a-better-developer.jpeg

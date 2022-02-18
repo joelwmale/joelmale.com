@@ -5,7 +5,7 @@ import _ from "lodash"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Newsletter } from "../components/newsletter"
+import { NewsletterComponent } from "../components/newsletter-component"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -43,7 +43,7 @@ const Tags = ({ pageContext, data }) => {
               of awesome stuff.
             </p>
 
-            <Newsletter />
+            <NewsletterComponent />
           </div>
         </div>
         <div className="py-10 max-w-[90%] lg:max-w-[100%] mx-auto">
@@ -62,7 +62,7 @@ const Tags = ({ pageContext, data }) => {
                         key={i}
                         className="blog-post-gradient p-4 flex justify-start min-h-[180px]"
                       >
-                        <Link to={slug} className="hover:cursor-ne-resize">
+                        <Link to={slug} className="hover:cursor-pointer">
                           <article
                             itemScope
                             itemType="http://schema.org/Article"

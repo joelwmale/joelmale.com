@@ -11,11 +11,9 @@ const Layout = ({ location, title, children }) => {
 
       <main class="max-w-[1440px] mx-auto">{children}</main>
       
-      {/* <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer> */}
+      <footer class="w-full text-center py-4">
+        <p class="text-secondary text-sm">© {new Date().getFullYear()} | Joel Male</p>
+      </footer>
     </div>
   )
 }

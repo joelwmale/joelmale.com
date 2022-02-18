@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Newsletter } from "../components/newsletter"
+import { NewsletterComponent } from "../components/newsletter-component"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import moment from "moment"
@@ -115,7 +115,7 @@ const BlogPostTemplate = ({ data, location }) => {
             </div>
           )}
 
-          <div>
+          <div class="pb-24">
             <div className="w-full bg-secondary h-[1px]"></div>
 
             <div className="pt-10 text-center">
@@ -124,7 +124,7 @@ const BlogPostTemplate = ({ data, location }) => {
               </h2>
 
               <div className="max-w-[90%] mx-auto">
-                <Newsletter />
+                <NewsletterComponent />
               </div>
             </div>
           </div>
