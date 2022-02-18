@@ -223,14 +223,6 @@ const Home = ({ data, location }) => {
               )}
             </div>
           </div>
-
-          <div className="py-10">
-            <h2 className="section-heading">Projects</h2>
-
-            <div class="mt-4">
-            
-            </div>
-          </div>
         </div>
       </main>
     </Layout>
