@@ -153,14 +153,22 @@
   },
   "content/blog/my-blogs-tech-stack/images/post-definitions.png": {
     "created": 1644620641,
-    "modified": 1644621539
+    "modified": 1644621627
   },
   "content/blog/my-blogs-tech-stack/images/rocket.jpeg": {
     "created": 1644621445,
-    "modified": 1644621539
+    "modified": 1644621627
   },
   "content/blog/my-blogs-tech-stack/index.md": {
     "created": 1644444444,
-    "modified": 1644621539
+    "modified": 1644621627
+  },
+  "content/blog/10-things-i-wish-i-couldve-told-my-junior-self/images/junior.jpeg": {
+    "created": 1645168881,
+    "modified": 1645168889
+  },
+  "content/blog/10-things-i-wish-i-couldve-told-my-junior-self/index.md": {
+    "created": 1645147534,
+    "modified": 1645168899
   }
 }
