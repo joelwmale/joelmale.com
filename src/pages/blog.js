@@ -101,7 +101,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 12
+      limit: 100
     ) {
       nodes {
         timeToRead
