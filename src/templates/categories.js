@@ -22,17 +22,14 @@ const Categories = ({ pageContext, data }) => {
       <div className="relative flex items-center justify-center w-full h-[60vh]">
         <div className="w-[95%] sm:w-[80%] flex flex-col items-center text-white">
           <div className="w-full text-center">
-            <h1 className="text-3xl font-bold sm:text-5xl hero-text">
-              {_.upperFirst(category)}
+            <h1 className="text-3xl font-bold sm:text-5xl">
+              Category: {_.upperFirst(category)}
             </h1>
-            <p class="mt-2 text-xs">
-              {totalCount} post{totalCount === 1 ? "" : "s"}
-            </p>
           </div>
         </div>
       </div>
       <div className="w-full max-w-[1040px] mx-auto">
-        <div className="py-10 text-center fade-in">
+        <div className="py-10 text-center">
           <div className="max-w-[90%] lg:max-w-[60%] mx-auto">
             <h2 className="text-xl text-secondary sm:text-3xl">
               Subscribe to have some of this quality content delivered straight
@@ -47,7 +44,7 @@ const Categories = ({ pageContext, data }) => {
           </div>
         </div>
         <div className="py-10 max-w-[90%] lg:max-w-[100%] mx-auto">
-          <h2 className="section-heading">Writing</h2>
+          <h2 className="section-heading">Posts</h2>
           <div>
             {edges.length > 0 ? (
               <div className="h-max">

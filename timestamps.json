@@ -5,7 +5,7 @@
   },
   "content/blog/8-tips-to-becoming-a-better-developer/index.md": {
     "created": 1643768633,
-    "modified": 1644045035
+    "modified": 1645169026
   },
   "content/blog/choosing-the-right-software-development-pathway-for-you/images/image_1.png": {
     "created": 1643768633,
@@ -57,7 +57,7 @@
   },
   "content/blog/choosing-the-right-software-development-pathway-for-you/index.md": {
     "created": 1643768633,
-    "modified": 1644045035
+    "modified": 1645169026
   },
   "content/blog/how-to-improve-your-code-quality/images/improving-your-code-quality.jpg": {
     "created": 1644012561,
@@ -65,7 +65,7 @@
   },
   "content/blog/how-to-improve-your-code-quality/index.md": {
     "created": 1643928688,
-    "modified": 1644045035
+    "modified": 1645169026
   },
   "content/blog/laravel-intellisense-how-to-make-your-ide-work-with-laravel/images/image_1.png": {
     "created": 1643768633,
@@ -117,7 +117,7 @@
   },
   "content/blog/laravel-intellisense-how-to-make-your-ide-work-with-laravel/index.md": {
     "created": 1643768633,
-    "modified": 1644045035
+    "modified": 1645169026
   },
   "content/blog/my-current-2021-dev-setup/images/alfred.png": {
     "created": 1643768633,
@@ -141,7 +141,7 @@
   },
   "content/blog/my-current-2021-dev-setup/index.md": {
     "created": 1643768633,
-    "modified": 1644045035
+    "modified": 1645169026
   },
   "content/blog/quality-resources-for-developers/images/8-tips-to-become-a-better-developer.jpeg": {
     "created": 1643768633,
@@ -149,7 +149,7 @@
   },
   "content/blog/quality-resources-for-developers/index.md": {
     "created": 1644022212,
-    "modified": 1644195562
+    "modified": 1645169026
   },
   "content/blog/my-blogs-tech-stack/images/post-definitions.png": {
     "created": 1644620641,
@@ -161,7 +161,7 @@
   },
   "content/blog/my-blogs-tech-stack/index.md": {
     "created": 1644444444,
-    "modified": 1644621627
+    "modified": 1645169026
   },
   "content/blog/10-things-i-wish-i-couldve-told-my-junior-self/images/junior.jpeg": {
     "created": 1645168881,
@@ -170,5 +170,21 @@
   "content/blog/10-things-i-wish-i-couldve-told-my-junior-self/index.md": {
     "created": 1645147534,
     "modified": 1645168899
+  },
+  "content/blog/10-things-i-wish-i-knew-when-i-was-a-junior-developer/images/junior.jpeg": {
+    "created": 1645169026,
+    "modified": 1645183260
+  },
+  "content/blog/10-things-i-wish-i-knew-when-i-was-a-junior-developer/index.md": {
+    "created": 1645169026,
+    "modified": 1645183260
+  },
+  "content/blog/ecommerce-website-design-the-essentials/images/ecommerce-design.jpeg": {
+    "created": 1645654923,
+    "modified": 1645654926
+  },
+  "content/blog/ecommerce-website-design-the-essentials/index.md": {
+    "created": 1645192843,
+    "modified": 1645654934
   }
 }

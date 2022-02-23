@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import _ from "lodash"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -8,13 +9,14 @@ import { NewsletterComponent } from "../components/newsletter-component"
 const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const { categories } = data.allMarkdownRemark
 
   return (
     <Layout location={location} title={siteTitle} className="bg-[#404040]">
-      <Seo 
-        title="A top quality dev blog" 
+      <Seo
+        title="A top quality dev blog"
         description="I sometimes share my top quality finds throughout the last fortnight, and tips and tricks along the way."
-        />
+      />
 
       <div className="relative flex items-center justify-center w-full py-[12rem]">
         <div className="w-[95%] sm:w-[80%] flex flex-col items-center text-white">
@@ -46,6 +48,29 @@ const Blog = ({ data, location }) => {
             <NewsletterComponent />
           </div>
         </div>
+
+        {categories.length > 0 && (
+          <div className="py-10 max-w-[90%] mx-auto">
+            <h2 className="section-heading">Categories</h2>
+            <div>
+              <ul className="flex flex-wrap">
+                {categories.map((category, i) => (
+                  <li key={i} className="mr-4">
+                    <Link
+                      to={`/categories/${category.fieldValue}`}
+                      className="text-white hover:text-purple-500 hover:underline"
+                    >
+                    <div className="flex mb-2">
+                      <h3>{_.upperFirst(category.fieldValue)}</h3>
+                    </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
         <div className="py-10 max-w-[90%] mx-auto">
           <h2 className="section-heading">Writing</h2>
           <div>
@@ -103,6 +128,17 @@ export const pageQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 100
     ) {
+      categories: group(field: frontmatter___categories) {
+        fieldValue
+        totalCount
+        edges {
+          node {
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
       nodes {
         timeToRead
         fields {

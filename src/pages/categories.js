@@ -23,13 +23,13 @@ const CategoriesPage = ({
     <div className="relative flex items-center justify-center w-full h-[60vh]">
       <div className="w-[95%] sm:w-[80%] flex flex-col items-center text-white">
         <div className="w-full text-center">
-          <h1 className="text-3xl font-bold sm:text-5xl hero-text">
+          <h1 className="text-3xl font-bold sm:text-5xl">
             <span>I</span>
             <span>sometimes</span>
             <span>write</span>
             <span>stuff</span>
           </h1>
-          <p className="text-xs mt-2 hero-text w-[80%] mx-auto sm:w-full">
+          <p className="text-xs mt-2 w-[80%] mx-auto sm:w-full">
             <span>
               (This year will be the year I write more - Joel, every year before
               this)
