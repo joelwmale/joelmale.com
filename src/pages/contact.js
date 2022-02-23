@@ -18,12 +18,12 @@ const Contact = ({ data, location }) => {
         <div className="w-[95%] md:w-[90%] flex flex-col items-center text-white">
           <div className="w-max text-left -rotate-[10deg]">
             <a href="mailto:joel@joelmale.com">
-              <h1 className="font-bold text-yellow-500 duration-500 text-8xl hero-text hover:text-purple-500">
+              <h1 className="font-bold text-purple-500 duration-500 text-8xl hover:text-yellow-500">
                 <span>joel@joelmale.com</span>
               </h1>
             </a>
           </div>
-          <div className="mt-8 text-yellow-500 hero-text">
+          <div className="mt-8 text-purple-500">
             <p>
               <span>Keep it simple. Send me an email.</span>
             </p>
