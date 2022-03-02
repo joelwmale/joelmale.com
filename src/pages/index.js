@@ -22,7 +22,7 @@ const Home = ({ data, location }) => {
           <div className="text-left w-max">
             <h1 className="font-bold text-center uppercase w-max">
               <p class="text-[9rem] md:text-[12rem] leading-[0.8]">Joel</p>
-              <p class="bg-purple-500 text-black text-[7rem] md:text-[10rem] leading-[0.8] w-full">Male</p>
+              <p class="text-black bg-purple-500 text-[7rem] md:text-[10rem] leading-[0.8] w-full">Male</p>
             </h1>
           </div>
         </div>

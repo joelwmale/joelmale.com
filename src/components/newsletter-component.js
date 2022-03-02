@@ -38,6 +38,7 @@ export const NewsletterComponent = () => {
               type="text"
               name="first_name"
               className="w-full input"
+              placeholder="John"
               onChange={e => setName(e.target.value)}
             />
           </div>
@@ -47,11 +48,12 @@ export const NewsletterComponent = () => {
               type="email"
               name="email"
               className="w-full input"
+              placeholder="your@awesome.com"
               onChange={e => setEmail(e.target.value)}
             />
           </div>
-          <button className="col-span-2 mt-4  md:mt-0 link-btn md:col-span-1">
-            <span>Subscribe</span>
+          <button className="col-span-2 mt-4 md:mt-0 link-btn md:col-span-1">
+            <span className="flex items-center justify-center"><span className="mr-2 text-xl">✨</span> Subscribe</span>
           </button>
         </div>
       )}

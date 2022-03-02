@@ -181,10 +181,18 @@
   },
   "content/blog/ecommerce-website-design-the-essentials/images/ecommerce-design.jpeg": {
     "created": 1645654923,
-    "modified": 1645654926
+    "modified": 1645655239
   },
   "content/blog/ecommerce-website-design-the-essentials/index.md": {
     "created": 1645192843,
-    "modified": 1645654934
+    "modified": 1645655239
+  },
+  "content/blog/how-to-be-an-efficient-developer/images/efficient-developer.jpeg": {
+    "created": 1645960723,
+    "modified": 1645960729
+  },
+  "content/blog/how-to-be-an-efficient-developer/index.md": {
+    "created": 1645959967,
+    "modified": 1645960764
   }
 }
