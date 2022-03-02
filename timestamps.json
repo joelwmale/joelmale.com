@@ -189,10 +189,22 @@
   },
   "content/blog/how-to-be-an-efficient-developer/images/efficient-developer.jpeg": {
     "created": 1645960723,
-    "modified": 1645960729
+    "modified": 1645960796
   },
   "content/blog/how-to-be-an-efficient-developer/index.md": {
     "created": 1645959967,
-    "modified": 1645960764
+    "modified": 1645960796
+  },
+  "content/blog/debugging-with-css/images/image_1.png": {
+    "created": 1646002507,
+    "modified": 1646002514
+  },
+  "content/blog/debugging-with-css/images/image_2.png": {
+    "created": 1646057746,
+    "modified": 1646057748
+  },
+  "content/blog/debugging-with-css/index.md": {
+    "created": 1645999859,
+    "modified": 1646200110
   }
 }

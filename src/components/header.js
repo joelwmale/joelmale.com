@@ -23,9 +23,9 @@ const Header = () => {
             <li>
               <Link to="/newsletter" activeClassName="underline bg-[#242424]">Newsletter</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/tools" activeClassName="underline bg-[#242424]">Tools</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
