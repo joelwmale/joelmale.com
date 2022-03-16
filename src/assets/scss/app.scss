@@ -249,7 +249,7 @@ deckgo-highlight-code {
   }
 
   a {
-    @apply text-purple-500 transition-all duration-500 hover:text-yellow-500;
+    @apply text-purple-500 transition-all duration-500 hover:text-yellow-500 font-bold underline;
   }
 
   blockquote {
