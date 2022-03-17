@@ -41,7 +41,7 @@ Lots of different reasons have prompted me to make this an agency and not just m
 
 The biggest reason for this decision is my belief in team collaboration. I learnt very early on in my career that multiple minds are stronger and better than any single mind could ever be.
 
-Luckily, I've managed to find a few reI thally talented developers to join me on this ride, which has helped me have enough confidence in Pixel and what we can do for our clients.
+Luckily, I've managed to find a few really talented developers to join me on this ride, which has helped me have enough confidence in Pixel and what we can do for our clients.
 
 ## We do only what we're good at: eCommerce & Bespoke solutions 
 
