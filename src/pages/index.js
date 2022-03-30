@@ -10,7 +10,7 @@ const Home = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} className="home">
       <Seo
         title="Joel Male: Backend Engineer & Mentor + Leader | Brisbane"
         forceTitle={true}
@@ -18,11 +18,13 @@ const Home = ({ data, location }) => {
       />
 
       <div className="relative flex items-center justify-center w-full py-[14rem]">
-        <div className="w-[95%] md:w-[90%] flex flex-col items-center text-purple-500">
+        <div className="w-[95%] md:w-[90%] flex flex-col items-center text-yellow-500">
           <div className="text-left w-max">
-            <h1 className="font-bold text-center uppercase w-max">
-              <p class="text-[9rem] md:text-[12rem] leading-[0.8]">Joel</p>
-              <p class="text-black bg-purple-500 text-[7rem] md:text-[10rem] leading-[0.8] w-full">Male</p>
+            <h1 className="font-bold text-center uppercase select-none w-max">
+              <p class="text-[7rem] md:text-[12rem] leading-[0.8]">Joel</p>
+              <p class="text-black bg-yellow-500 text-[7rem] md:text-[10rem] leading-[0.8] w-full">
+                Male
+              </p>
             </h1>
           </div>
         </div>
@@ -35,7 +37,7 @@ const Home = ({ data, location }) => {
       </div>
 
       <main>
-        <div className="w-[90%] md:w-full max-w-[1040px] mx-auto">
+        <div className="w-[90%] max-w-[1040px] mx-auto">
           <div className="py-10">
             <h2 className="section-heading">Who am I?</h2>
 
@@ -92,22 +94,11 @@ const Home = ({ data, location }) => {
                   This is what I've been up to lately:
                 </p>
 
-                <ul className="items-stretch grid grid-cols-2 gap-x-0 gap-y-3 mt-3 w-full max-w-[400px]">
-                  <li className="up-to-highlight">TALL Stack</li>
-                  <li className="up-to-highlight">eCommerce</li>
-                  <li className="up-to-highlight">Open Source</li>
-                  <li className="up-to-highlight">Side Projects</li>
-                  <li className="up-to-highlight">
-                    Eating chicken parmys
-                    <br />
-                    <div>
-                      <ul className="flex">
-                        <li className="mr-1">🔥</li>
-                        <li className="mr-1">🔥</li>
-                        <li className="mr-1">🔥</li>
-                      </ul>
-                    </div>
-                  </li>
+                <ul className="items-stretch grid gap-x-0 gap-y-3 mt-3 w-full max-w-[400px]">
+                <li className="up-to-highlight">Started a digital agency 👉 <a href="https://wearepixel.com" target="_blank">Pixel</a></li>
+                  <li className="up-to-highlight">Discovering <a href="https://tallstack.dev/" target="_blank">TALL Stack</a></li>
+                  <li className="up-to-highlight">Working on a side project, #buildinpublic</li>
+                  <li className="up-to-highlight">Eating chicken parmys 🔥</li>
                 </ul>
               </div>
               <div className="w-full md:w-[40%] flex justify-center">
@@ -122,13 +113,11 @@ const Home = ({ data, location }) => {
                     alt="Joel Male Developer"
                   />
 
-                  <div className="absolute top-0 right-0 text-right text-white">
+                  <div className="absolute top-0 right-[1rem] md:right-[-1rem] lg:right-[1rem] text-right text-white">
                     <p className="pb-3 font-bold rotate-12">Actually me</p>
                     <svg
-                      className="absolute right-0 rotate-90 top-full"
+                      className="absolute right-0 rotate-90 top-full w-[100px] pt-4"
                       xmlns="http://www.w3.org/2000/svg"
-                      height="100"
-                      width="200"
                       viewBox="0 0 208.54 176.57"
                     >
                       <path
@@ -142,14 +131,14 @@ const Home = ({ data, location }) => {
                     </svg>
                   </div>
 
-                  <div className="mb-1.5 pt-10 mt-4 text-white relative w-max">
+                  <div className="mb-1.5 pt-10 mt-4 md:mt-8 lg:mt-6 text-white relative w-max">
                     <p className="font-bold rotate-6">
-                      I almost never wear collar shirts
+                      I never wear collar shirts
                       <br />
-                      because I find them uncomfortable
+                      because they are uncomfortable
                     </p>
                     <svg
-                      className="-rotate-[250deg] scale-x-[-1] absolute top-0 right-0"
+                      className="-rotate-[250deg] md:-rotate-[280deg] lg:-rotate-[250deg] scale-x-[-1] absolute top-0 right-0"
                       xmlns="http://www.w3.org/2000/svg"
                       height="10"
                       width="70"
@@ -174,8 +163,32 @@ const Home = ({ data, location }) => {
             </div>
           </div>
 
-          <div className="py-10">
-            <h2 className="section-heading">Writing</h2>
+          <div className="py-10 w-[95%] md:w-full mx-auto">
+            <h2 className="section-heading">Pixel - A fresh digital agency</h2>
+
+            <div class="max-w-3xl">
+              <p className="pl-1 mt-3 mb-6 text-white md:text-lg">
+                I'm the founder and managing director of{" "}
+                <a
+                  href="https://wearepixel.com.au"
+                  target="_blank"
+                >
+                  Pixel
+                </a>
+                , a small but mighty digital agency that I started taking
+                seriously in March, 2022. We specialise in helping brands scale
+                through high performing eCommerce stores and custom solutions to
+                complex business problems. I wrote a blog post diving into the decision, <Link to="/announcing-pixel">read it here.</Link>
+              </p>
+
+              <a href="https://wearepixel.com.au" target="_blank" className="link-btn">
+                      <span>Visit our super cool website</span>
+                    </a>
+            </div>
+          </div>
+
+          <div className="py-10 w-[95%] md:w-full mx-auto">
+            <h2 className="section-heading">Blog</h2>
 
             <div class="mt-4">
               {posts.length > 0 ? (
@@ -188,7 +201,7 @@ const Home = ({ data, location }) => {
                       >
                         <Link
                           to={post.fields.slug}
-                          className="hover:cursor-pointer"
+                          className="hover:cursor-pointer blog-link"
                         >
                           <article
                             itemScope
@@ -199,7 +212,7 @@ const Home = ({ data, location }) => {
                                 {post.frontmatter.title || post.fields.slug}
                               </h2>
 
-                              <div className="text-tertiary">
+                              <div className="pt-1 text-tertiary">
                                 <p className="text-xs uppercase">
                                   {post.timeToRead} min read <span>•</span>{" "}
                                   {post.frontmatter.date}
@@ -214,7 +227,7 @@ const Home = ({ data, location }) => {
 
                   <div className="flex justify-center mt-12">
                     <Link to="/blog" className="link-btn">
-                      <span>Read More</span>
+                      <span>view all</span>
                     </Link>
                   </div>
                 </div>

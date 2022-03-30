@@ -2,10 +2,12 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import _ from "lodash"
+import format from "date-fns/format"
+
+import divider from "../../static/divider.svg"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { NewsletterComponent } from "../components/newsletter-component"
 
 const Categories = ({ pageContext, data }) => {
   const { category } = pageContext
@@ -13,7 +15,7 @@ const Categories = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout title={siteTitle} className="bg-[#404040]">
+    <Layout title={siteTitle}>
       <Seo
         title="A top quality dev blog"
         description="I sometimes share my top quality finds throughout the last fortnight, and tips and tricks along the way."
@@ -29,54 +31,67 @@ const Categories = ({ pageContext, data }) => {
         </div>
       </div>
       <div className="w-full max-w-[1040px] mx-auto">
-        <div className="py-10 text-center">
-          <div className="max-w-[90%] lg:max-w-[60%] mx-auto">
-            <h2 className="text-xl text-secondary sm:text-3xl">
-              Subscribe to have some of this quality content delivered straight
-              to your inbox
-            </h2>
-            <p className="mt-2 text-xs text-tertiary sm:text-sm lg:mt-0">
-              I don't send very many emails, but when I do, they're jam-packed
-              of awesome stuff.
-            </p>
-
-            <NewsletterComponent />
-          </div>
-        </div>
         <div className="py-10 max-w-[90%] lg:max-w-[100%] mx-auto">
           <h2 className="section-heading">Posts</h2>
           <div>
             {edges.length > 0 ? (
               <div className="h-max">
-                <ul className="grid items-stretch justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4">
+            <ul className="grid items-stretch justify-center grid-cols-1 gap-y-6">
                   {edges.map((node, i) => {
                     const { timeToRead } = node.node
                     const { slug } = node.node.fields
-                    const { title, date } = node.node.frontmatter
+                    const { title, date, image, description } = node.node.frontmatter
                     return (
-                      <li
-                        key={i}
-                        className="blog-post-gradient p-4 flex justify-start min-h-[180px]"
-                      >
-                        <Link to={slug} className="hover:cursor-pointer">
-                          <article
-                            itemScope
-                            itemType="http://schema.org/Article"
-                          >
-                            <header>
-                              <h2 className="text-2xl font-bold text-white">
-                                {title || slug}
-                              </h2>
+                      <li>
+                  <div class="grid grid-cols-6 py-8">
+                    <div class="col-span-2">
+                      <div>
+                        {image &&
+                          image.childImageSharp.resize && (
+                            <img
+                              src={
+                                image.childImageSharp.resize
+                                  .src
+                              }
+                              className="object-cover w-full h-full"
+                              alt={title || slug}
+                              placeholder="none"
+                              loading="eager"
+                            />
+                          )}
+                      </div>
+                      <div class="py-0.5">
+                        <time
+                          dateTime={date}
+                          class="text-white text-xs"
+                        >
+                          {format(
+                            new Date(date),
+                            "MMMM d, yyyy"
+                          )}
+                        </time>
+                      </div>
+                    </div>
+                    <div class="col-span-4 flex flex-col pl-6">
+                      <Link to={`${slug}`} class="blog-link">
+                        <h3 class="text-3xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
+                          {title || slug}
+                        </h3>
+                      </Link>
 
-                              <div className="text-gray-300">
-                                <p className="text-xs uppercase">
-                                  {timeToRead} min read <span>•</span> {date}
-                                </p>
-                              </div>
-                            </header>
-                          </article>
-                        </Link>
-                      </li>
+                      <p class="text-white mt-4 max-w-md font-body">
+                        {description}
+                      </p>
+                    </div>
+                  </div>
+                  {/* if its not the last loop */}
+                  {i !== edges.length - 1 && (
+                    <div
+                      className="w-full h-2 bg-repeat-x"
+                      style={{ backgroundImage: `url(${divider})` }}
+                    />
+                  )}
+                </li>
                     )
                   })}
                 </ul>
@@ -138,6 +153,16 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "D MMMM YYYY")
+            description
+            image: featured {
+              childImageSharp {
+                resize(width: 1200) {
+                  src
+                  height
+                  width
+                }
+              }
+            }
           }
         }
       }

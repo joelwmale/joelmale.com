@@ -6,6 +6,8 @@ import Seo from "../components/seo"
 import { NewsletterComponent } from "../components/newsletter-component"
 
 import divider from "../../static/divider.svg"
+
+import vscodeIcon from "../images/tools/vscode.png"
 import onePasswordIcon from "../images/tools/1password.png"
 import alfredIcon from "../images/tools/alfred.png"
 import telegramIcon from "../images/tools/telegram.png"
@@ -13,6 +15,7 @@ import figmaIcon from "../images/tools/figma.png"
 import cleanshotXIcon from "../images/tools/cleanshot-x.png"
 import spotifyIcon from "../images/tools/spotify.png"
 import braveIcon from "../images/tools/brave.png"
+import bearIcon from "../images/tools/bear.png"
 
 import productMbpIcon from "../images/tools/product-mbp.png"
 import productMxMaster3Icon from "../images/tools/product-mx-master-3.png"
@@ -22,7 +25,7 @@ const Tools = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle} className="bg-[#404040]">
+    <Layout location={location} title={siteTitle}>
       <Seo
         title="Tools"
         description="A collection of my most used tools & hardware for every-day dev."
@@ -31,7 +34,7 @@ const Tools = ({ data, location }) => {
       <div className="relative flex items-center justify-center w-full py-[12rem] max-w-5xl mx-auto">
         <div className="w-[95%] sm:w-[90%] flex flex-col items-center text-white">
           <div className="w-full text-center">
-            <h1 className="sm:text-4xl text-2xl font-bold max-w-[90%] mx-auto text-center">
+          <h1 className="text-6xl font-bold sm:text-8xl max-w-[100%] md:max-w-[90%] lg:max-w-[60%] mx-auto text-center">
               Tools
             </h1>
             <div className="max-w-[90%] mx-auto mt-4">
@@ -41,7 +44,7 @@ const Tools = ({ data, location }) => {
               </h2>
             </div>
             <div
-              className="w-full h-2 my-8 bg-repeat-x"
+              className="hidden w-full h-2 my-8 bg-repeat-x sm:block"
               style={{ backgroundImage: `url(${divider})` }}
             />
 
@@ -53,6 +56,24 @@ const Tools = ({ data, location }) => {
               </p>
 
               <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-8">
+                <a href="https://code.visualstudio.com/" class="border-tertiary border-opacity-30 border rounded group">
+                  <div class="py-8 w-full bg-[#242424] rounded-t flex items-center justify-center duration-300 group-hover:bg-[#292929]">
+                    <img src={vscodeIcon} class="w-20 h-20" alt="" />
+                  </div>
+                  <div class="p-4">
+                    <h4 class="mb-1 tracking-wide">VSCode</h4>
+                    <p class="text-sm">The only IDE/code editor you'll ever need</p>
+                  </div>
+                </a>
+                <a href="https://1password.com/" class="border-tertiary border-opacity-30 border rounded group">
+                  <div class="py-8 w-full bg-[#242424] rounded-t flex items-center justify-center duration-300 group-hover:bg-[#292929]">
+                    <img src={onePasswordIcon} class="w-20 h-20" alt="" />
+                  </div>
+                  <div class="p-4">
+                    <h4 class="mb-1 tracking-wide">1Password</h4>
+                    <p class="text-sm">A clean, simple, and easy to use password manager</p>
+                  </div>
+                </a>
                 <a href="https://1password.com/" class="border-tertiary border-opacity-30 border rounded group">
                   <div class="py-8 w-full bg-[#242424] rounded-t flex items-center justify-center duration-300 group-hover:bg-[#292929]">
                     <img src={onePasswordIcon} class="w-20 h-20" alt="" />
@@ -116,6 +137,15 @@ const Tools = ({ data, location }) => {
                     <p class="text-sm">A beautiful and clean privacy-focused browser</p>
                   </div>
                 </a>
+                <a href="https://bear.app/" class="border-tertiary border-opacity-30 border rounded group">
+                  <div class="py-8 w-full bg-[#242424] rounded-t flex items-center justify-center duration-300 group-hover:bg-[#292929]">
+                    <img src={bearIcon} class="w-20 h-20" alt="" />
+                  </div>
+                  <div class="p-4">
+                    <h4 class="mb-1 tracking-wide">Bear</h4>
+                    <p class="text-sm">An amazing markdown note taking app for MacOS & iOS</p>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -155,8 +185,6 @@ const Tools = ({ data, location }) => {
                 </a>
               </div>
             </div>
-
-            <NewsletterComponent />
           </div>
         </div>
       </div>

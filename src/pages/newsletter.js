@@ -9,7 +9,7 @@ const Newsletter = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle} className="bg-[#404040]">
+    <Layout location={location} title={siteTitle}>
       <Seo
         title="A top quality dev blog"
         description="I sometimes share my top quality finds throughout the last fortnight, and tips and tricks along the way."

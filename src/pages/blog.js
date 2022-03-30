@@ -1,115 +1,93 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import _ from "lodash"
+import format from "date-fns/format"
+
+import divider from "../../static/divider.svg"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { NewsletterComponent } from "../components/newsletter-component"
 
 const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  const { categories } = data.allMarkdownRemark
 
   return (
-    <Layout location={location} title={siteTitle} className="bg-[#404040]">
+    <Layout location={location} title={siteTitle}>
       <Seo
-        title="A top quality dev blog"
+        title="Blog"
         description="I sometimes share my top quality finds throughout the last fortnight, and tips and tricks along the way."
       />
 
       <div className="relative flex items-center justify-center w-full py-[12rem]">
         <div className="w-[95%] sm:w-[80%] flex flex-col items-center text-white">
-          <div className="w-full text-center">
-            <h1 className="text-6xl font-bold sm:text-8xl max-w-[100%] md:max-w-[90%] lg:max-w-[60%] mx-auto text-centet">
-              I sometimes write stuff.
-            </h1>
-            <p className="text-xs mt-2 w-[80%] mx-auto sm:w-full">
-              <span>
-                (This year will be the year I write more - Joel, every year
-                before this)
-              </span>
-            </p>
-          </div>
+          <h1 className="text-6xl font-bold sm:text-8xl max-w-[100%] md:max-w-[90%] lg:max-w-[60%] mx-auto text-center">
+            Dev Blog
+          </h1>
         </div>
       </div>
-      <div className="w-full">
-        <div className="py-10 text-center">
-          <div className="max-w-[90%] lg:max-w-[60%] mx-auto">
-            <h2 className="text-xl text-secondary sm:text-3xl">
-              Subscribe to have some of this quality content delivered straight
-              to your inbox
-            </h2>
-            <p className="mt-2 text-xs text-tertiary sm:text-sm lg:mt-0">
-              I don't send very many emails, but when I do, they're jam-packed
-              of awesome stuff.
-            </p>
 
-            <NewsletterComponent />
-          </div>
-        </div>
-
-        {categories.length > 0 && (
-          <div className="py-10 max-w-[90%] mx-auto">
-            <h2 className="section-heading">Categories</h2>
-            <div>
-              <ul className="flex flex-wrap">
-                {categories.map((category, i) => (
-                  <li key={i} className="mr-4">
-                    <Link
-                      to={`/categories/${category.fieldValue}`}
-                      className="text-white hover:text-purple-500 hover:underline"
-                    >
-                    <div className="flex mb-2">
-                      <h3>{_.upperFirst(category.fieldValue)}</h3>
+      <div className="max-w-4xl py-10 mx-auto">
+        {posts.length > 0 ? (
+          <div className="h-max">
+            <ul className="grid items-stretch justify-center grid-cols-1 gap-y-6">
+              {posts.map((post, i) => (
+                <li>
+                  <div class="grid grid-cols-6 py-8">
+                    <div class="col-span-2">
+                      <div>
+                        {post.frontmatter.image &&
+                          post.frontmatter.image.childImageSharp.resize && (
+                            <img
+                              src={
+                                post.frontmatter.image.childImageSharp.resize
+                                  .src
+                              }
+                              className="object-cover w-full h-full"
+                              alt={post.frontmatter.title || post.fields.slug}
+                              placeholder="none"
+                              loading="eager"
+                            />
+                          )}
+                      </div>
+                      <div class="py-0.5">
+                        <time
+                          dateTime={post.frontmatter.date}
+                          class="text-white text-xs"
+                        >
+                          {format(
+                            new Date(post.frontmatter.date),
+                            "MMMM d, yyyy"
+                          )}
+                        </time>
+                      </div>
                     </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-
-        <div className="py-10 max-w-[90%] mx-auto">
-          <h2 className="section-heading">Writing</h2>
-          <div>
-            {posts.length > 0 ? (
-              <div className="h-max">
-                <ul className="grid items-stretch justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4">
-                  {posts.map((post, i) => (
-                    <li
-                      key={i}
-                      className="blog-post-gradient p-4 flex justify-start min-h-[180px]"
-                    >
-                      <Link
-                        to={post.fields.slug}
-                        className="hover:cursor-pointer"
-                      >
-                        <article itemScope itemType="http://schema.org/Article">
-                          <header>
-                            <h2 className="text-2xl font-bold text-white">
-                              {post.frontmatter.title || post.fields.slug}
-                            </h2>
-
-                            <div className="text-gray-300">
-                              <p className="text-xs uppercase">
-                                {post.timeToRead} min read <span>•</span>{" "}
-                                {post.frontmatter.date}
-                              </p>
-                            </div>
-                          </header>
-                        </article>
+                    <div class="col-span-4 flex flex-col pl-6">
+                      <Link to={`${post.fields.slug}`} class="blog-link">
+                        <h3 class="text-3xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
+                          {post.frontmatter.title || post.fields.slug}
+                        </h3>
                       </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : (
-              <p>No posts yet</p>
-            )}
+
+                      <p class="text-white mt-4 max-w-md font-body">
+                        {post.frontmatter.description}
+                      </p>
+                    </div>
+                  </div>
+                  {/* if its not the last loop */}
+                  {i !== posts.length - 1 && (
+                    <div
+                      className="w-full h-2 bg-repeat-x"
+                      style={{ backgroundImage: `url(${divider})` }}
+                    />
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ) : (
+          <p>No posts yet</p>
+        )}
       </div>
     </Layout>
   )
@@ -128,26 +106,25 @@ export const pageQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 100
     ) {
-      categories: group(field: frontmatter___categories) {
-        fieldValue
-        totalCount
-        edges {
-          node {
-            frontmatter {
-              title
-            }
-          }
-        }
-      }
       nodes {
         timeToRead
         fields {
           slug
         }
         frontmatter {
-          date(formatString: "D MMMM YYYY")
+          date
+          categories
           title
           description
+          image: featured {
+            childImageSharp {
+              resize(width: 1200) {
+                src
+                height
+                width
+              }
+            }
+          }
         }
       }
     }

@@ -197,14 +197,22 @@
   },
   "content/blog/debugging-with-css/images/image_1.png": {
     "created": 1646002507,
-    "modified": 1646002514
+    "modified": 1646200139
   },
   "content/blog/debugging-with-css/images/image_2.png": {
     "created": 1646057746,
-    "modified": 1646057748
+    "modified": 1646200139
   },
   "content/blog/debugging-with-css/index.md": {
     "created": 1645999859,
-    "modified": 1646200110
+    "modified": 1646200139
+  },
+  "content/blog/announcing-pixel/images/hero_image.jpeg": {
+    "created": 1647319873,
+    "modified": 1647467934
+  },
+  "content/blog/announcing-pixel/index.md": {
+    "created": 1647319801,
+    "modified": 1647467934
   }
 }

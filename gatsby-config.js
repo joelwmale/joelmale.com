@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Joel Male: Backend Engineer + Leader | Brisbane`,
+    title: `Joel Male`,
     description: `I'm a backend developer using Laravel to solve problems and create fun experiences. I sometimes write content to share my knowledge with others.`,
     keywords: ["laravel", "shopify", "web development"],
     siteUrl: `https://joelmale.com/`,
@@ -10,11 +10,11 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        trackingId: `UA-218431868-1`,
-        head: true,
-        defer: true,
+        id: `GTM-TZX4WZ`,
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "web" },
         enableWebVitalsTracking: true,
       },
     },

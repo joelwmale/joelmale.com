@@ -4,14 +4,14 @@ import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/
 
 deckDeckGoHighlightElement()
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, className }) => {
   return (
-    <div className="bg-[#111111] min-h-screen">
+    <div className="min-h-screen bg-primary">
       <div className="bg-gradient-to-r w-full h-1 from-[#E39600] via-[#EA4C89] to-[#8F48EB]" />
       
       <Header />
 
-      <main class="max-w-[1440px] mx-auto">{children}</main>
+      <main class={`max-w-[1440px] mx-auto ${className}`}>{children}</main>
 
       <footer class="w-full text-center py-4">
         <p class="text-secondary text-sm">

@@ -3,7 +3,7 @@ title: Laravel + Intellisense - How To Make Your IDE Work With Laravel
 date: "2022-01-02"
 description: "Laravel is sometimes too \"magicy\" which makes it hard for IDEs to understand. Let's see how we can fix that by installing an extension, and a composer package to your projects!"
 featured: images/laravel-intellisense.jpeg
-categories: ['development', 'laravel']
+categories: ['dev', 'laravel']
 tags: ['tips & tricks', 'dev', 'laravel']
 ---
 
