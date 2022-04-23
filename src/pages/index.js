@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import format from "date-fns/format"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -95,9 +96,21 @@ const Home = ({ data, location }) => {
                 </p>
 
                 <ul className="items-stretch grid gap-x-0 gap-y-3 mt-3 w-full max-w-[400px]">
-                <li className="up-to-highlight">Started a digital agency 👉 <a href="https://wearepixel.com" target="_blank">Pixel</a></li>
-                  <li className="up-to-highlight">Discovering <a href="https://tallstack.dev/" target="_blank">TALL Stack</a></li>
-                  <li className="up-to-highlight">Working on a side project, #buildinpublic</li>
+                  <li className="up-to-highlight">
+                    Started a digital agency 👉{" "}
+                    <a href="https://wearepixel.com" target="_blank">
+                      Pixel
+                    </a>
+                  </li>
+                  <li className="up-to-highlight">
+                    Discovering{" "}
+                    <a href="https://tallstack.dev/" target="_blank">
+                      TALL Stack
+                    </a>
+                  </li>
+                  <li className="up-to-highlight">
+                    Working on a side project, #buildinpublic
+                  </li>
                   <li className="up-to-highlight">Eating chicken parmys 🔥</li>
                 </ul>
               </div>
@@ -164,76 +177,121 @@ const Home = ({ data, location }) => {
           </div>
 
           <div className="py-10 w-[95%] md:w-full mx-auto">
-            <h2 className="section-heading">Pixel - A fresh digital agency</h2>
+            <h2 className="section-heading">
+              Pixel - The agency I believe every client deserves
+            </h2>
 
             <div class="max-w-3xl">
               <p className="pl-1 mt-3 mb-6 text-white md:text-lg">
-                I'm the founder and managing director of{" "}
+                In 2022, I decided to quit my full time job and start a{" "}
                 <a
                   href="https://wearepixel.com.au"
+                  rel="dofollow"
                   target="_blank"
                 >
-                  Pixel
-                </a>
-                , a small but mighty digital agency that I started taking
-                seriously in March, 2022. We specialise in helping brands scale
-                through high performing eCommerce stores and custom solutions to
-                complex business problems. I wrote a blog post diving into the decision, <Link to="/announcing-pixel">read it here.</Link>
+                  shopify focused digital agency.
+                </a>{" "}
+                I've had some incredible feedback from clients already that we
+                are changing the agency game.
+                <br />
+                <br />I wrote a blog post diving into the decision,{" "}
+                <Link to="/announcing-pixel">read it here.</Link>
               </p>
 
-              <a href="https://wearepixel.com.au" target="_blank" className="link-btn">
-                      <span>Visit our super cool website</span>
-                    </a>
+              <a
+                href="https://wearepixel.com.au"
+                target="_blank"
+                className="link-btn"
+              >
+                <span>Visit the website</span>
+              </a>
             </div>
           </div>
 
           <div className="py-10 w-[95%] md:w-full mx-auto">
             <h2 className="section-heading">Blog</h2>
 
-            <div class="mt-4">
+            <div className="max-w-4xl mx-auto">
               {posts.length > 0 ? (
                 <div className="h-max">
-                  <ul className="grid items-stretch justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4">
+                  <ul className="grid items-stretch justify-center grid-cols-1 gap-y-6">
                     {posts.map((post, i) => (
-                      <li
-                        key={i}
-                        className="blog-post-gradient p-4 flex justify-start min-h-[180px]"
-                      >
-                        <Link
-                          to={post.fields.slug}
-                          className="hover:cursor-pointer blog-link"
-                        >
-                          <article
-                            itemScope
-                            itemType="http://schema.org/Article"
-                          >
-                            <header>
-                              <h2 className="text-2xl font-bold text-white">
+                      <li class="">
+                        <div class="grid grid-cols-6 pb-8">
+                          <div class="col-span-6 md:col-span-2">
+                            <div>
+                              {post.frontmatter.image &&
+                                post.frontmatter.image.childImageSharp
+                                  .resize && (
+                                  <img
+                                    src={
+                                      post.frontmatter.image.childImageSharp
+                                        .resize.src
+                                    }
+                                    className="object-cover w-full h-full"
+                                    alt={
+                                      post.frontmatter.title || post.fields.slug
+                                    }
+                                    placeholder="none"
+                                    loading="eager"
+                                  />
+                                )}
+                            </div>
+                            <div class="hidden md:block py-0.5">
+                              <time
+                                dateTime={post.frontmatter.date}
+                                class="text-white text-xs"
+                              >
+                                {format(
+                                  new Date(post.frontmatter.date),
+                                  "MMMM d, yyyy"
+                                )}
+                              </time>
+                            </div>
+                          </div>
+                          <div class="col-span-6 md:col-span-4 flex flex-col md:pl-6 mt-2 md:pt-0">
+                            <div class="block">
+                              <time
+                                dateTime={post.frontmatter.date}
+                                class="text-white text-xs"
+                              >
+                                {format(
+                                  new Date(post.frontmatter.date),
+                                  "MMMM d, yyyy"
+                                )}
+                              </time>
+                            </div>
+                            <Link to={`${post.fields.slug}`} class="blog-link">
+                              <h3 class="text-3xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
                                 {post.frontmatter.title || post.fields.slug}
-                              </h2>
+                              </h3>
+                            </Link>
 
-                              <div className="pt-1 text-tertiary">
-                                <p className="text-xs uppercase">
-                                  {post.timeToRead} min read <span>•</span>{" "}
-                                  {post.frontmatter.date}
-                                </p>
-                              </div>
-                            </header>
-                          </article>
-                        </Link>
+                            <p class="text-white mt-4 max-w-md font-body">
+                              {post.frontmatter.description}
+                            </p>
+                          </div>
+                        </div>
+                        {/* if its not the last loop */}
+                        {i !== posts.length - 1 && (
+                          <div className="w-full h-[1px] bg-slate-50" />
+                        )}
                       </li>
                     ))}
                   </ul>
-
-                  <div className="flex justify-center mt-12">
-                    <Link to="/blog" className="link-btn">
-                      <span>view all</span>
-                    </Link>
-                  </div>
                 </div>
               ) : (
                 <p>No posts yet</p>
               )}
+
+              <div class="w-full flex justify-center">
+              <Link
+                to="/blog"
+                className="link-btn"
+              >
+                <span>view more</span>
+              </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -264,6 +322,15 @@ export const pageQuery = graphql`
           date(formatString: "D MMMM YYYY")
           title
           description
+          image: featured {
+            childImageSharp {
+              resize(width: 1200) {
+                src
+                height
+                width
+              }
+            }
+          }
         }
       }
     }

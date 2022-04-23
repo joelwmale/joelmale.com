@@ -3,8 +3,6 @@ import { Link, graphql } from "gatsby"
 import _ from "lodash"
 import format from "date-fns/format"
 
-import divider from "../../static/divider.svg"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -22,7 +20,7 @@ const Blog = ({ data, location }) => {
       <div className="relative flex items-center justify-center w-full py-[12rem]">
         <div className="w-[95%] sm:w-[80%] flex flex-col items-center text-white">
           <h1 className="text-6xl font-bold sm:text-8xl max-w-[100%] md:max-w-[90%] lg:max-w-[60%] mx-auto text-center">
-            Dev Blog
+            Blog
           </h1>
         </div>
       </div>
@@ -32,9 +30,9 @@ const Blog = ({ data, location }) => {
           <div className="h-max">
             <ul className="grid items-stretch justify-center grid-cols-1 gap-y-6">
               {posts.map((post, i) => (
-                <li>
+                <li class="px-4 lg:px-0">
                   <div class="grid grid-cols-6 py-8">
-                    <div class="col-span-2">
+                    <div class="col-span-6 md:col-span-2">
                       <div>
                         {post.frontmatter.image &&
                           post.frontmatter.image.childImageSharp.resize && (
@@ -50,7 +48,7 @@ const Blog = ({ data, location }) => {
                             />
                           )}
                       </div>
-                      <div class="py-0.5">
+                      <div class="hidden md:block py-0.5">
                         <time
                           dateTime={post.frontmatter.date}
                           class="text-white text-xs"
@@ -62,7 +60,18 @@ const Blog = ({ data, location }) => {
                         </time>
                       </div>
                     </div>
-                    <div class="col-span-4 flex flex-col pl-6">
+                    <div class="col-span-6 md:col-span-4 flex flex-col md:pl-6 mt-2 md:pt-0">
+                    <div class="block">
+                        <time
+                          dateTime={post.frontmatter.date}
+                          class="text-white text-xs"
+                        >
+                          {format(
+                            new Date(post.frontmatter.date),
+                            "MMMM d, yyyy"
+                          )}
+                        </time>
+                      </div>
                       <Link to={`${post.fields.slug}`} class="blog-link">
                         <h3 class="text-3xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
                           {post.frontmatter.title || post.fields.slug}
@@ -77,9 +86,7 @@ const Blog = ({ data, location }) => {
                   {/* if its not the last loop */}
                   {i !== posts.length - 1 && (
                     <div
-                      className="w-full h-2 bg-repeat-x"
-                      style={{ backgroundImage: `url(${divider})` }}
-                    />
+                      className="w-full h-[1px] bg-slate-50"/>
                   )}
                 </li>
               ))}

@@ -147,7 +147,7 @@ html {
   @apply flex flex-col w-full items-start sm:flex-row sm:items-center text-white text-4xl font-bold mb-6;
 
   &::after {
-    @apply w-[80%] sm:w-[40%] ml-0 sm:ml-[20px] mt-2 sm:mt-0;
+    @apply w-[90%] sm:w-[40%] ml-0 sm:ml-[20px] mt-2 sm:mt-0;
 
     background: linear-gradient(90deg, #682ae9 20%, #e778ff);
     height: 2px;
@@ -185,7 +185,7 @@ deckgo-highlight-code {
 }
 
 .blog-post {
-  @apply text-sm md:text-base py-10 text-secondary;
+  @apply text-[15px] md:text-base py-10 text-secondary;
 
   .table-of-contents {
     @apply pb-4 mb-12 border-b border-purple-500 w-full;
