@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Stolzl', 'sans-serif'],
-        'serif': ['Stolzl', 'sans-serif'],
-        'mono': ['Stolzl', 'sans-serif'],
-        'display': ['Stolzl', 'sans-serif'],
-        'body': ['Montserrat', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif'],
+        'serif': ['Inter', 'sans-serif'],
+        'mono': ['Inter', 'sans-serif'],
+        'display': ['Inter', 'sans-serif'],
+        'body': ['Inter', 'sans-serif'],
       },
 
       colors: {
@@ -17,6 +17,15 @@ module.exports = {
         'secondary': '#dbdbdb',
         'tertiary': '#a3a3a3',
         'pixel-pink': "#f74ea1",
+
+        dark: {
+          '400': '#1d1829',
+          '500': '#141d26',
+        },
+
+        gray: {
+          '700': '#A0AEC0'
+        },
 
         purple: {
           500: '#e778ff',

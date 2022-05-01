@@ -1,4 +1,35 @@
-// new font
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Inter'), url('../fonts/Inter-Thin.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inter'), url('../fonts/Inter-Regular.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Inter'), url('../fonts/Inter-SemiBold.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Inter'), url('../fonts/Inter-Bold.ttf') format("ttf");
+}
+
 @font-face {
   font-family: "Stolzl";
   font-style: normal;

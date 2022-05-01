@@ -2,9 +2,7 @@
 title: The Essentials of eCommerce Website Design
 date: "2022-02-24"
 description: "For customers, a great eCommerce website is an absolute dream to use. No delays. No confusion. No second-guessing. Just intuitively simple user experience, product appeal and brand trust."
-featured: images/ecommerce-design.jpeg
 categories: ['thoughts', 'ecommerce']
-tags: ['ecommerce', 'web design']
 ---
 
 After several years of working in eCommerce and at some pretty big brands like [Culture Kings](https://culturekings.com.au/), I’ve picked up on some important essentials that every eCommerce store needs to convert. Here’s a few of my learnings 🔥👇

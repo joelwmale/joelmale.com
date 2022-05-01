@@ -2,7 +2,6 @@
 title: How To Be An Efficient Developer
 date: "2022-02-27"
 description: "Efficiency can sometimes disguise itself in laziness.🕵️‍♀️ But if you’re being clever, you’ll spot your opportunities to streamline, economise & optimise your workflow."
-featured: images/efficient-developer.jpeg
 categories: ['thoughts', 'dev']
 ---
 

@@ -2,9 +2,7 @@
 title: Announcing Pixel - A Small But Mighty Digital Agency
 date: "2022-03-15"
 description: "A brand new digital agency with young flair and years of experience solving all kinds of problems for eCommerce and custom web applications."
-featured: images/hero_image.jpeg
 categories: ['announcements']
-tags: ['announcements']
 ---
 
 Alright, it's been a minute since I've posted anything but hear me out. It's for good reason.

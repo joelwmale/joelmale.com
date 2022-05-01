@@ -38,7 +38,7 @@ export const NewsletterComponent = () => {
               type="text"
               name="first_name"
               className="w-full input"
-              placeholder="John"
+              placeholder="Richard"
               onChange={e => setName(e.target.value)}
             />
           </div>
@@ -48,7 +48,7 @@ export const NewsletterComponent = () => {
               type="email"
               name="email"
               className="w-full input"
-              placeholder="your@awesome.com"
+              placeholder="richard@piedpiper.com"
               onChange={e => setEmail(e.target.value)}
             />
           </div>

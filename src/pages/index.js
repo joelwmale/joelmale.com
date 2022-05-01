@@ -42,10 +42,8 @@ const Home = ({ data, location }) => {
           <div className="py-10">
             <h2 className="section-heading">Who am I?</h2>
 
-            <i className="fa-solid fa-user"></i>
-
             <div className="flex flex-col items-start justify-between w-full md:items-start md:flex-row">
-              <div className="w-full md:w-[60%] flex flex-col text-left items-start text-gray-200">
+              <div className="w-full mb-8 sm:mb-0 md:w-[60%] flex flex-col text-left items-start text-gray-200">
                 <p className="pl-1 mt-3">
                   I'm&nbsp;
                   <a
@@ -77,7 +75,7 @@ const Home = ({ data, location }) => {
                   goals.{" "}
                 </p>
 
-                <p className="pl-1 mt-3">
+                <p className="pl-1 mt- 3">
                   If I'm not working, I am either engineering complex freelance
                   projects (like the one I'm currently working on, building an
                   e-commerce platform from scratch using the TALL stack for a
@@ -114,6 +112,7 @@ const Home = ({ data, location }) => {
                   <li className="up-to-highlight">Eating chicken parmys 🔥</li>
                 </ul>
               </div>
+
               <div className="w-full md:w-[40%] flex justify-center">
                 <div className="relative w-max">
                   <StaticImage
@@ -176,10 +175,8 @@ const Home = ({ data, location }) => {
             </div>
           </div>
 
-          <div className="py-10 w-[95%] md:w-full mx-auto">
-            <h2 className="section-heading">
-              Pixel - The agency I believe every client deserves
-            </h2>
+          <div className="w-full py-10 mx-auto">
+            <h2 className="section-heading">Pixel</h2>
 
             <div class="max-w-3xl">
               <p className="pl-1 mt-3 mb-6 text-white md:text-lg">
@@ -208,74 +205,39 @@ const Home = ({ data, location }) => {
             </div>
           </div>
 
-          <div className="py-10 w-[95%] md:w-full mx-auto">
+          <div className="w-full py-10 mx-auto">
             <h2 className="section-heading">Blog</h2>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="py-6 mx-auto">
               {posts.length > 0 ? (
                 <div className="h-max">
-                  <ul className="grid items-stretch justify-center grid-cols-1 gap-y-6">
+                  <ul className="divide-y divide-dark-500">
                     {posts.map((post, i) => (
-                      <li class="">
-                        <div class="grid grid-cols-6 pb-8">
-                          <div class="col-span-6 md:col-span-2">
-                            <div>
-                              {post.frontmatter.image &&
-                                post.frontmatter.image.childImageSharp
-                                  .resize && (
-                                  <img
-                                    src={
-                                      post.frontmatter.image.childImageSharp
-                                        .resize.src
-                                    }
-                                    className="object-cover w-full h-full"
-                                    alt={
-                                      post.frontmatter.title || post.fields.slug
-                                    }
-                                    placeholder="none"
-                                    loading="eager"
-                                  />
-                                )}
-                            </div>
-                            <div class="hidden md:block py-0.5">
-                              <time
-                                dateTime={post.frontmatter.date}
-                                class="text-white text-xs"
-                              >
-                                {format(
-                                  new Date(post.frontmatter.date),
-                                  "MMMM d, yyyy"
-                                )}
-                              </time>
-                            </div>
-                          </div>
-                          <div class="col-span-6 md:col-span-4 flex flex-col md:pl-6 mt-2 md:pt-0">
-                            <div class="block">
-                              <time
-                                dateTime={post.frontmatter.date}
-                                class="text-white text-xs"
-                              >
-                                {format(
-                                  new Date(post.frontmatter.date),
-                                  "MMMM d, yyyy"
-                                )}
-                              </time>
-                            </div>
+                      <li class="px-4 sm:px-6 py-4 hover:bg-dark-400">
+                        <div class="flex flex-col sm:flex-row justify-between py-2">
+                          <div>
                             <Link to={`${post.fields.slug}`} class="blog-link">
-                              <h3 class="text-3xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
+                              <h3 class="text-2xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
                                 {post.frontmatter.title || post.fields.slug}
                               </h3>
                             </Link>
 
-                            <p class="text-white mt-4 max-w-md font-body">
+                            <p class="text-white opacity-80 max-w-2xl font-body">
                               {post.frontmatter.description}
                             </p>
                           </div>
+                          <div class="flex items-end mt-2 sm:mt-0">
+                            <time
+                              dateTime={post.frontmatter.date}
+                              class="text-white text-xs"
+                            >
+                              {format(
+                                new Date(post.frontmatter.date),
+                                "MMMM d, yyyy"
+                              )}
+                            </time>
+                          </div>
                         </div>
-                        {/* if its not the last loop */}
-                        {i !== posts.length - 1 && (
-                          <div className="w-full h-[1px] bg-slate-50" />
-                        )}
                       </li>
                     ))}
                   </ul>
@@ -283,15 +245,12 @@ const Home = ({ data, location }) => {
               ) : (
                 <p>No posts yet</p>
               )}
+            </div>
 
-              <div class="w-full flex justify-center">
-              <Link
-                to="/blog"
-                className="link-btn"
-              >
+            <div class="w-full flex justify-center">
+              <Link to="/blog" className="link-btn">
                 <span>view more</span>
               </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -322,15 +281,6 @@ export const pageQuery = graphql`
           date(formatString: "D MMMM YYYY")
           title
           description
-          image: featured {
-            childImageSharp {
-              resize(width: 1200) {
-                src
-                height
-                width
-              }
-            }
-          }
         }
       }
     }

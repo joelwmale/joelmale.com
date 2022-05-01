@@ -25,21 +25,20 @@ const BlogPostTemplate = ({ data, location }) => {
         image={image}
       />
 
-      <div className="flex justify-center pt-40">
+      <div className="flex justify-center pt-[12rem]">
         <div className="max-w-[90%] sm:max-w-[90%] lg:max-w-[906px] text-tertiary">
           <article itemScope itemType="http://schema.org/Article">
             <header>
+              <p className="mb-1 text-sm text-gray-700">
+                {post.frontmatter.date} <span>•</span> {post.timeToRead} min
+                read
+              </p>
               <h1
                 itemProp="headline"
                 className="text-3xl font-bold text-white md:text-5xl"
               >
                 {post.frontmatter.title}
               </h1>
-
-              <p className="uppercase md:text-[0.6rem] mb-4 mt-1 text-secondary">
-                {post.timeToRead} min read <span>•</span>{" "}
-                {post.frontmatter.date}
-              </p>
 
               <div class="mb-4">
                 {post.frontmatter.categories && (
@@ -62,30 +61,7 @@ const BlogPostTemplate = ({ data, location }) => {
                     </ul>
                   </div>
                 )}
-
-                {post.frontmatter.tags && (
-                  <div class="flex">
-                    <h3 class="text-white mr-2">Tags:</h3>
-                    <ul className="flex flex-wrap">
-                      {post.frontmatter.tags.map((tag, i) => (
-                        <li key={tag} className="mr-2">
-                          {i > 0 && (
-                            <span className="mr-2 -ml-2 text-white">,</span>
-                          )}
-                          <a
-                            href={`/tags/${tag}`}
-                            className="capitalize duration-500 text-secondary hover:text-yellow-500"
-                          >
-                            {tag}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
-
-              <div className="w-full bg-secondary opacity-20 h-[1px] mb-8"></div>
 
               {post.frontmatter.description && (
                 <div>
@@ -154,19 +130,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        tags
-        categories
         date(formatString: "MMMM DD, YYYY")
         description
-        image: featured {
-          childImageSharp {
-            resize(width: 1200) {
-              src
-              height
-              width
-            }
-          }
-        }
       }
     }
   }

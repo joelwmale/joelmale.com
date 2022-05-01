@@ -2,9 +2,7 @@
 title: Quality Resources For Developers
 date: "2022-02-06"
 description: "A collection of some top quality resources for developers to use to continue learning something new every day."
-featured: images/8-tips-to-become-a-better-developer.jpeg
 categories: ['dev']
-tags: ['dev', 'resources']
 --- 
 
 If you're anything like me, you're always on the hunt for a website or resource that pumps out very high-quality content such as tips and tricks, guides, or even showing off cool things that are achievable in the most basic languages *(like complex animations in CSS - god how I wish I could do that)* 😮 

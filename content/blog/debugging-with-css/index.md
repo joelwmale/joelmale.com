@@ -2,9 +2,7 @@
 title: "Quick tips: Debugging With CSS Borders"
 date: "2022-03-02"
 description: "Quick and hacky way to debug annoying layout issues with CSS"
-featured: images/image_1.png
 categories: ['dev']
-tags: ['dev', 'css']
 ---
 
 This is a topic that comes up every now and then on Twitter and a few other platforms I regularly visit.
