@@ -107,3 +107,9 @@ Well that's all for this one team. Hopefully that all makes sense and gives you 
 I'll leave you with this:
 
 Follow [this guy](https://twitter.com/kylepdotco) asap, and if you can, join myself and other devs at [the best comunity for freelancers](https://freelanceryachtclub.com/).
+
+## Psst.. how can we work together?
+
+I am the Managing Director of [Pixel](https://wearepixel.com.au), a digital agency helping eCommerce brands convert and scale. 
+
+Reach out to me via the website for a chat and let's see if we can work together to make something great.
