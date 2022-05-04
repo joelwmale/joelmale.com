@@ -16,7 +16,7 @@ I spend a lot of time on [Twitter](https://twitter.com/joelwmale) and [LinkedIn]
 - How do I freelance?
 - How can I get started and how do I find someone to do freelance for?
 
-I've been freelancing for 5 years, and running a digital agency for a few months so I feel like these are questions I can ask!
+I've been freelancing for 5 years, and running a digital agency for a few months so I feel like these are questions I can answer!
 
 So let's dive in hey?
 
