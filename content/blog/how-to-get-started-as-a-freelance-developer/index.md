@@ -26,7 +26,7 @@ Absolutely whatever you want. The truth is, this is such a silly question in pro
 
 Making websites and need some server-side logic? Cool here are just a few of your options: Node, Perl, PHP, Python.
 
-Want to do some front-end? Well you need HTML and CSS and sprinkle in just a bit of: Javascript, Python, Ruby, PHP
+Want to do some front-end? Well you need HTML and CSS and sprinkle in just a bit of: Javascript, Python, Ruby, PHP.
 
 Some languages are better than others generally for freelancing, depending on what you want to do...
 
@@ -42,7 +42,7 @@ Why?
 
 No-code is the future. You don't need to code anything. All of these platforms have the ability to create elements, and style them through the UI. Press buttons until it looks good basically.
 
-CSS will forever be beneficial, as will Javascript, but really no need for any other languages
+CSS and JavaScript will both be beneficial to know to help you do more complicated functionality + design.
 
 ### Bespoke web apps
 
@@ -52,7 +52,7 @@ For custom web applications - you can use a variety of languages and methods to 
 
 I personally use the [TALL Stack](https://tallstack.dev/) approach, which is Laravel, Livewire, AlpineJS and TailwindCSS. This stack is everything I've ever dreamed of, so shout out to the developers behind them!
 
-Another good choice is [Ruby on Rails](https://rubyonrails.org/) - both have great community support, and an insane amount of available packages.
+Another good choice is [Ruby on Rails](https://rubyonrails.org/) - both have great community support, and an insane number of available packages.
 
 ### How do I freelance?
 
@@ -60,7 +60,7 @@ This is a question I specifically wanted to answer, as truthfully, the first and
 
 One thing I see many developers new to freelance do is treat themselves like a commodity and not charge what they're worth.
 
-I know this is a common issue, as the dev industry is more and more becoming a battle of who can go lower, but we need to break that. I know everyone is itching for work, but it's severely hurting our repuation as smart individuals who are really talented.
+I know this is a common issue, as the dev industry is becoming a battle of who can go lower, but we need to break that. I know everyone is itching for work, but it's severely hurting our repuation as smart individuals who are really talented.
 
 So charge your value, whether that be $50 an hour, or $80 an hour. A smart person knows they are paying more, for quality, speed, and responsibility.
 
@@ -72,7 +72,7 @@ Make sure you track all of your time, and do not do anything for free. It's simp
 
 Well, there are many ways to get started.
 
-Everyone would recommend you get make a post on fiverr, or something similar but honestly please don't. These communities just make development a commodity and it's not good for the industry.
+Everyone would recommend you to make a post on fiverr, or something similar but honestly please don't. These communities just make development a commodity and it's not good for the industry.
 
 I'd recommend registering on [UpWork](https://www.upwork.com/) as you can dictate your hourly rate and bid on projects.
 
@@ -80,13 +80,13 @@ It can be quite hard to initially get any work through UpWork as you'll have no 
 
 If you have an UpWork profile and find it hard to get work, ping me on Twitter and I'll review it.
 
-ANother great way to get started freelancing is two things:
+Another great way to get started freelancing is two things:
 
 #### Open source
 
 Contribute to open source as much as possible. This does wonders for your career. 
 
-You may be thinking "but why? how? how will anyone see it?"
+You may be thinking "But why? How? How will anyone see it?"
 
 Well, someone using the project you regularly contribute to, may actually own a business, and like your work. They may actually send you an offer to freelance for them - happens all the time.
 
