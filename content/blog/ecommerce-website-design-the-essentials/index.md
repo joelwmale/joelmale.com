@@ -2,6 +2,7 @@
 title: The Essentials of eCommerce Website Design
 date: "2022-02-24"
 description: "For customers, a great eCommerce website is an absolute dream to use. No delays. No confusion. No second-guessing. Just intuitively simple user experience, product appeal and brand trust."
+featured: images/ecommerce-design.jpeg
 categories: ['thoughts', 'ecommerce']
 ---
 

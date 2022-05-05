@@ -2,6 +2,7 @@
 title: Quality Resources For Developers
 date: "2022-02-06"
 description: "A collection of some top quality resources for developers to use to continue learning something new every day."
+featured: images/8-tips-to-become-a-better-developer.jpeg
 categories: ['dev']
 --- 
 

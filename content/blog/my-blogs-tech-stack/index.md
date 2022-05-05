@@ -2,6 +2,7 @@
 title: My Blogs Tech Stack
 date: "2022-02-12"
 description: "My blog has gone through a lot of iterations over the last year or so. Read on for a bit of a deep dive into the tech stacks I've tried and what I ultimately settled on!"
+featured: images/rocket.jpeg
 categories: ['dev','gatsby']
 ---
 

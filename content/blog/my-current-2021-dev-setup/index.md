@@ -2,6 +2,7 @@
 title: My Current (2021) Dev Setup
 date: "2021-12-30"
 description: "A curated summary of all of the tools I use in my daily life as a senior back-end developer + leader."
+featured: images/my-current-2021-setup.png
 categories: ['dev', 'life']
 ---
 

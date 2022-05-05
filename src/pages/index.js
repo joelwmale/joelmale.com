@@ -13,15 +13,15 @@ const Home = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} className="home">
       <Seo
-        title="Joel Male: Backend Engineer & Mentor + Leader | Brisbane"
+        title="Joel Male: eCommerce Developer + Laravel Expert | Brisbane"
         forceTitle={true}
-        description="I'm a backend developer using Laravel to solve problems and create fun experiences. I sometimes write content to share my knowledge with others."
+        description="I'm a web designer and web developer specialising in eCommerce and custom development using Shopify and Laravel. Available for freelancing."
       />
 
       <div className="relative flex items-center justify-center w-full py-[14rem]">
         <div className="w-[95%] md:w-[90%] flex flex-col items-center text-yellow-500">
           <div className="text-left w-max">
-            <h1 className="font-bold text-center uppercase select-none w-max">
+            <h1 className="font-extrabold text-center uppercase select-none w-max">
               <p class="text-[7rem] md:text-[12rem] leading-[0.8]">Joel</p>
               <p class="text-black bg-yellow-500 text-[7rem] md:text-[10rem] leading-[0.8] w-full">
                 Male
@@ -214,13 +214,14 @@ const Home = ({ data, location }) => {
                   <ul className="divide-y divide-dark-500">
                     {posts.map((post, i) => (
                       <li class="px-4 sm:px-6 py-4 hover:bg-dark-400">
-                        <div class="flex flex-col sm:flex-row justify-between py-2">
+                        <Link
+                          to={`${post.fields.slug}`}
+                          class="flex flex-col sm:flex-row justify-between py-2 blog-link"
+                        >
                           <div>
-                            <Link to={`${post.fields.slug}`} class="blog-link">
-                              <h3 class="text-2xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
-                                {post.frontmatter.title || post.fields.slug}
-                              </h3>
-                            </Link>
+                            <h3 class="text-2xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
+                              {post.frontmatter.title || post.fields.slug}
+                            </h3>
 
                             <p class="text-white opacity-80 max-w-2xl font-body">
                               {post.frontmatter.description}
@@ -237,7 +238,7 @@ const Home = ({ data, location }) => {
                               )}
                             </time>
                           </div>
-                        </div>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -249,7 +250,7 @@ const Home = ({ data, location }) => {
 
             <div class="w-full flex justify-center">
               <Link to="/blog" className="link-btn">
-                <span>view more</span>
+                <span>read more</span>
               </Link>
             </div>
           </div>

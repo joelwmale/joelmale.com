@@ -2,6 +2,7 @@
 title: How To Avoid And Quicky Recover From Code Burnout
 date: "2022-03-30"
 description: "Many developers will understand what I mean when I say “code burnout”. We have all been there at some point in our careers, probably multiple times..."
+featured: images/hero.jpeg
 categories: ['thoughts','dev']
 ---
 

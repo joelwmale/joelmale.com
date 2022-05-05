@@ -2,6 +2,7 @@
 title: How To Improve The Quality Of Your Code
 date: "2022-02-04"
 description: "It's incredibly important to maintain a high level of code quality when working in a team, but even more so when working solo to ensure you can quickly understand your own code and avoid catching yourself say \"wtf was I thinking\" 🤦"
+featured: images/improving-your-code-quality.jpg
 categories: ['dev']
 ---
 

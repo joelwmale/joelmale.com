@@ -40,13 +40,14 @@ const Blog = ({ data, location }) => {
             <ul className="divide-y divide-dark-500">
               {posts.map((post, i) => (
                 <li class="px-6 py-4 hover:bg-dark-400">
-                  <div class="flex flex-col sm:flex-row justify-between py-2">
+                  <Link
+                    to={`${post.fields.slug}`}
+                    class="flex flex-col sm:flex-row justify-between py-2 blog-link"
+                  >
                     <div>
-                      <Link to={`${post.fields.slug}`} class="blog-link">
-                        <h3 class="text-2xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
-                          {post.frontmatter.title || post.fields.slug}
-                        </h3>
-                      </Link>
+                      <h3 class="text-2xl text-white font-bold duration-500 transition-all hover:text-yellow-500">
+                        {post.frontmatter.title || post.fields.slug}
+                      </h3>
 
                       <p class="text-white opacity-80 max-w-2xl font-body">
                         {post.frontmatter.description}
@@ -63,7 +64,7 @@ const Blog = ({ data, location }) => {
                         )}
                       </time>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               ))}
             </ul>

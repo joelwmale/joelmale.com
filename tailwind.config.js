@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
-        'serif': ['Inter', 'sans-serif'],
-        'mono': ['Inter', 'sans-serif'],
-        'display': ['Inter', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+        'sans': ['Gilroy', 'sans-serif'],
+        'serif': ['Gilroy', 'sans-serif'],
+        'mono': ['Gilroy', 'sans-serif'],
+        'display': ['Gilroy', 'sans-serif'],
+        'body': ['Gilroy', 'sans-serif'],
       },
 
       colors: {

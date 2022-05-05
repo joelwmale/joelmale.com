@@ -2,6 +2,7 @@
 title: 10 Things I Wish I Knew When I Was A Junior Developer
 date: "2022-02-18"
 description: "In this post, I take a little trip down memory lane and talk about some things I wish I knew when I was a junior developer."
+featured: images/junior.jpeg
 categories: ['dev']
 ---
 

@@ -2,6 +2,8 @@
 title: How To Get Started As A Freelance Developer
 date: "2022-04-30"
 description: "Freelancing is one of the best parts about being a developer. It let's us control our hours and income. Let's see how we can get started with freelancing."
+featured: images/freelance-dev.jpeg
+categories: ['dev']
 ---
 
 One of the best, and most unique things about our industry in development and I.T is that we **all** have the knowledge and ability to go out and do something on the side.
